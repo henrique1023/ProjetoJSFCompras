@@ -1,4 +1,4 @@
-package br.com.dio.controller;
+package br.com.dio.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
