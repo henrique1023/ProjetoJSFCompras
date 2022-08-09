@@ -16,8 +16,7 @@ public class EmployeeBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	@Inject
-	private Employee employee;
+	private Employee employee = new Employee();
 	
 	private List<Employee> employees = new ArrayList<>();
 
@@ -40,7 +39,6 @@ public class EmployeeBean implements Serializable{
 	public void addEmployee(){
 		employees.add(employee);
 		clean();
-		System.out.println("Sucesso");
 	}
 	
 	private void clean() {

@@ -18,8 +18,6 @@ import br.com.dio.model.User;
 public class LoginFilter implements Filter {
 	
 	 public void destroy() {
-	           // TODO Auto-generated method stub
-
 	 }
 
 	 public void doFilter(ServletRequest request, ServletResponse response,
@@ -35,16 +33,14 @@ public class LoginFilter implements Filter {
 	              String contextPath = ((HttpServletRequest) request)
 	                                 .getContextPath();
 	              ((HttpServletResponse) response).sendRedirect(contextPath
-	                                 + "form_login.xhtml");
+	                                 + "/form_login.xhtml");
 	     } else {
 	              chain.doFilter(request, response);
 	     }
 
 	 }
 
-	 public void init(FilterConfig arg0) throws ServletException {
-	           // TODO Auto-generated method stub
-
+	 public void init(FilterConfig filterConfig) throws ServletException {
 	 }
 
 }
