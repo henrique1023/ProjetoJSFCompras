@@ -3,7 +3,7 @@ package br.com.dio.bean;
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -15,13 +15,12 @@ import br.com.dio.service.UserService;
 import br.com.dio.util.UserUtil;
 
 @Named
-@RequestScoped
+@SessionScoped
 public class LoginBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	@Inject
-	private UserService userBO;
+	private UserService userBO= new UserService();
 	private String email;
 	private String login;
 	private String senha;

@@ -8,11 +8,10 @@
 
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet name="style.css" library="css"/>
 	<title>Pagina</title>
 </h:head>
 <h:body>
-	<p:messages showDetail="Chave necessaria" />
-	<p:autoUpdate on="descrição" />
 	<div id="container">
 
 		<div id="login_box">
@@ -20,10 +19,11 @@
 			<div id="titulo_login">Acesso Restrito</div>
 			<div id="subtitulo_login">Apenas Pessoas autorizadas podem
 				acessar este painel</div>
+			<p:autoUpdate on="true" />
+			<p:messages showDetail="detalhe" />
 			<h:form id="formLogin" enctype="multipart/form-data">
 
 				<p:growl autoUpdate="true" id="messages" />
-
 				<p:panelGrid styleClass="semBorda" columns="2">
 
 					<h:outputText value="Login: " />
@@ -34,8 +34,6 @@
 
 				</p:panelGrid>
 
-				<br />
-				<br />
 				<p:panelGrid columns="2" styleClass="semBorda">
 					<p:commandButton icon="ui-icon-unlocked" value="Entrar"
 						action="#{loginBean.doLogin()}" />
@@ -46,10 +44,10 @@
 			</h:form>
 			
 			<h:form>
-					<h:outputText value="Criar senha: " />
-					<p:password value="#{loginBean.senhaCriada}" size="37" />
-					<p:commandButton icon="ui-icon-unlocked" value="Entrar"
-						action="#{loginBean.testeSenha()}" />
+				<h:outputText value="Criar senha: " />
+				<p:password value="#{loginBean.senhaCriada}" size="37" />
+				<p:commandButton icon="ui-icon-unlocked" value="Entrar"
+					action="#{loginBean.testeSenha()}" />
 			</h:form>
 
 			<h:form>

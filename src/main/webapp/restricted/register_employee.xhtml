@@ -5,7 +5,8 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-
+	
+	<h:outputStylesheet library="css" name="styles.css" />
 	<!-- CSS only -->
 	<link
 		href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -16,7 +17,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Pagina</title>
 
-	<h:outputStylesheet library="css" name="styles.css" />
+	
 	<style>
 	.modal {
 	width: 300px;
@@ -60,7 +61,7 @@
 			</div>
 		</div>
 	</nav>
-	<p:messages showDetail="Chave necessaria" />
+	<p:messages rendered="true" showDetail="Chave necessario" />
 	<p:autoUpdate on="descrição" />
 	<h1>Cadastrar Evento</h1>
 	<!-- criando os campos para inserir os dados -->
