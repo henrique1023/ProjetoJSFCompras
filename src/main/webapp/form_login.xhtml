@@ -9,71 +9,63 @@
 
 <h:head>
 	<title>Pagina</title>
+	<style>
+.login {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.boxlogin {
+	margin: auto;
+	background-color: green;
+}
+</style>
 </h:head>
 <h:body>
-	<div id="container">
+	<div id="container" class="login">
 
-		<div id="login_box">
+		<div id="login_box" class="boxlogin">
 			<div id="logo_login"></div>
-			<div id="titulo_login">Acesso Restrito</div>
-			<div id="subtitulo_login">Apenas Pessoas autorizadas podem
-				acessar este painel</div>
+			<h2></h2>
 			<p:autoUpdate on="true" />
 			<p:messages showDetail="detalhe" />
 			<h:form id="formLogin" enctype="multipart/form-data">
 
 				<p:growl autoUpdate="true" id="messages" />
-				<p:panelGrid styleClass="semBorda" columns="2">
-
-					<h:outputText value="Login: " />
-					<p:inputText value="#{loginBean.login}" size="37" />
-
-					<h:outputText value="Senha: " />
-					<p:password value="#{loginBean.senha}" size="37" />
-					<p:commandButton icon="ui-icon-unlocked" value="Entrar"
-						action="#{loginBean.doLogin()}" />
-					<p:commandButton id="reset" value="Resetar Senha" icon="pi pi-cog"
-						action="#{dFViewBean.viewProducts}"
-						styleClass="mr-2 ui-button-outlined">
-						<f:ajax render="reset"></f:ajax>
-						</p:commandButton>
-				</p:panelGrid>
-
-			</h:form>
-			<br /> <br />
-			<h:form>
-				<h:outputText value="Criar senha: " />
-				<p:password value="#{loginBean.senhaCriada}" size="37" />
-				<p:commandButton icon="ui-icon-unlocked" value="Entrar"
-					action="#{loginBean.testeSenha()}" />
-			</h:form>
-
-			<h:form id="boxresetarsenha">
-				<p:dialog id="dialogResetarSenha" header="Resetar Senha"
-					widgetVar="varDialogResetarSenha" modal="true" showEffect="fade"
-					resizable="false" hideEffect="fade">
-					<p:panelGrid styleClass="semBorda" columns="1">
-						<p:inputText value="#{loginBean.login}" required="true" size="60"
-							requiredMessage="O login é obrigatório" id="loginRecuperaSenha" />
-						<p:watermark value="Digite seu login" for="loginRecuperaSenha" />
-
-						<p:inputText value="#{loginBean.email}" required="true" size="60"
-							requiredMessage="O email é obrigatório" id="emailRecuperaSenha" />
-						<p:watermark value="Digite seu email" for="emailRecuperaSenha" />
+				<p:panelGrid contentStyleClass="align-items-baseline ui-fluid"
+					columns="8" layout="grid">
+					<p:panelGrid columns="2">
+					<span class="ui-input-icon-left"> <i class="pi pi-user" />
+						<p:inputText placeholder="Login" value="#{loginBean.login}"
+							required="true" />
+					</span>
 					</p:panelGrid>
-					<p:commandButton value="Confirmar" icon="ui-icon-circle-check"
-						actionListener="#{loginBean.solicitarNovaSenha()}"
-						oncomplete="if (!args.validationFailed)
-                                  {varDialogResetarSenha.hide()}" />
-					<p:commandButton value="Cancelar" type="button"
-						icon="ui-icon-circle-close" onclick="varDialogResetarSenha.hide()" />
-				</p:dialog>
+					<p:panelGrid columns="2">
+					<span class="ui-input-icon-left"> <i class="pi pi-lock" />
+						<p:password value="#{loginBean.senha}" placeholder="Senha" />
+					</span>
+					</p:panelGrid>
+					
+				</p:panelGrid>
+				<p:panelGrid contentStyleClass="align-items-baseline ui-fluid"
+						columns="2" layout="grid">
+						<p:commandButton value="Entrar" action="#{loginBean.doLogin()}"
+							styleClass="ui-button-outlined ui-button-success" />
+						<p:commandButton id="reset" value="Resetar Senha"
+							action="#{loginBean.resetSenha}"
+							styleClass="ui-button-outlined ui-button-help" immediate="true" />
+					</p:panelGrid>
+
 			</h:form>
-
 		</div>
-
-
 	</div>
-	<!-- div container -->
 </h:body>
 </html>

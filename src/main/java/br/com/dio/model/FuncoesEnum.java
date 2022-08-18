@@ -1,12 +1,14 @@
 package br.com.dio.model;
 
-public enum TipoEnum {
+import javax.persistence.Entity;
+
+public enum FuncoesEnum {
 	ADMINISTRADOR(1),
 	VENDEDOR(2),
 	ANALISTA(3);
 	
 	public int valorTipo;
-	TipoEnum(int valor){
+	FuncoesEnum(int valor){
 		valorTipo = valor;
 	}
 	

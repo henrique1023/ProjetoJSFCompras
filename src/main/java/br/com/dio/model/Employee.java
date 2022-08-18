@@ -27,7 +27,7 @@ public class Employee implements Serializable{
 	private String lastname;
 	private String cpf;
 	private String rg;
-	private TipoEnum tipoEnum;
+	private FuncoesEnum funcao;
 	private Date birthday;
 	private String telefone;
 	private Float salary;
@@ -36,8 +36,7 @@ public class Employee implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	public Employee(Long registerEmployee, String name, String lastname, String cpf, String rg, TipoEnum tipoEnum,
+	public Employee(Long registerEmployee, String name, String lastname, String cpf, String rg, FuncoesEnum funcao,
 			Date birthday, String telefone, Float salary) {
 		super();
 		this.registerEmployee = registerEmployee;
@@ -45,67 +44,117 @@ public class Employee implements Serializable{
 		this.lastname = lastname;
 		this.cpf = cpf;
 		this.rg = rg;
-		this.tipoEnum = tipoEnum;
+		this.funcao = funcao;
 		this.birthday = birthday;
 		this.telefone = telefone;
 		this.salary = salary;
 	}
 
+
 	public Long getRegisterEmployee() {
 		return registerEmployee;
 	}
+
+
+
 	public void setRegisterEmployee(Long registerEmployee) {
 		this.registerEmployee = registerEmployee;
 	}
+
+
+
 	public String getName() {
 		return name;
 	}
+
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
+
 	public String getLastname() {
 		return lastname;
 	}
+
+
+
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
+
+
+
 	public String getCpf() {
 		return cpf;
 	}
+
+
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
+
+
 	public String getRg() {
 		return rg;
 	}
+
+
+
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	public TipoEnum getTipoEnum() {
-		return tipoEnum;
+
+	public FuncoesEnum getFuncao() {
+		return funcao;
 	}
-	public void setTipoEnum(TipoEnum tipoEnum) {
-		this.tipoEnum = tipoEnum;
+
+
+
+	public void setFuncao(FuncoesEnum funcao) {
+		this.funcao = funcao;
 	}
-	
+
+
+
 	public Date getBirthday() {
 		return birthday;
 	}
+
+
+
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
+
+
+
 	public String getTelefone() {
 		return telefone;
 	}
+
+
+
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
+
+
 	public Float getSalary() {
 		return salary;
 	}
+
+
+
 	public void setSalary(Float salary) {
 		this.salary = salary;
 	}
+
 
 
 	@Override

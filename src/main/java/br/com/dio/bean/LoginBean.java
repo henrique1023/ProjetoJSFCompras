@@ -61,6 +61,10 @@ public class LoginBean implements Serializable{
 				new FacesMessage(FacesMessage.SEVERITY_INFO, "Nova Senha enviada para o email " + email, ""));
 	}
 	
+	public String resetSenha() {
+		return "reset_senha.xhtml?faces-redirect=true";
+	}
+	
 	public void testeSenha() {
 		String senha2 = UserUtil.convertStringToMd5(senhaCriada);
 		System.out.println(senha2);

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Pagina</title>
+</h:head>
+<h:body>
+	<h1>Primeira Pagina</h1>
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="Nome" />
+			<h:inputText />
+			
+			<h:outputText value="Senha" />
+			<h:inputSecret />
+			
+			<h:outputText value="btn" />
+			<h:commandButton value="Enviar" />
+			
+			<h:outputText value="checkbox" />
+			<h:selectManyCheckbox>
+				<f:selectItem itemLabel="Valor que aparece na tela"
+					itemValue="valor que vai para o banco" />
+				<f:selectItem itemLabel="Segundo valor" />
+			</h:selectManyCheckbox>
+			
+			<h:outputText value="Combo Box" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Menu que aparece na tela"
+					itemValue="valor que vai para o banco" />
+				<f:selectItem itemLabel="Segundo valor" />
+			</h:selectOneMenu>
+			
+			<h:outputText value="Radio button" />
+		 	<h:selectOneRadio>
+		 		<f:selectItem itemLabel="Menu que aparece na tela"
+					itemValue="valor que vai para o banco" />
+				<f:selectItem itemLabel="Segundo valor" />
+		 	</h:selectOneRadio>
+			
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
