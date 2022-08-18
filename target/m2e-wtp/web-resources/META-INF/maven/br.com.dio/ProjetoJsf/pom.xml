@@ -13,7 +13,6 @@
 	</properties>
 
 	<dependencies>
-
 		<!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -63,11 +62,6 @@
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>11.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.omnifaces</groupId>
-			<artifactId>omnifaces</artifactId>
-			<version>2.6.2</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.annotation</groupId>
@@ -123,8 +117,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<source>8</source>
+					<target>8</target>
 				</configuration>
 			</plugin>
 			<plugin>

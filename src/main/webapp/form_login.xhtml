@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -7,8 +8,6 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<h:outputStylesheet name="style.css" library="css"/>
 	<title>Pagina</title>
 </h:head>
 <h:body>
@@ -31,18 +30,17 @@
 
 					<h:outputText value="Senha: " />
 					<p:password value="#{loginBean.senha}" size="37" />
-
-				</p:panelGrid>
-
-				<p:panelGrid columns="2" styleClass="semBorda">
 					<p:commandButton icon="ui-icon-unlocked" value="Entrar"
 						action="#{loginBean.doLogin()}" />
-					<p:commandButton icon="ui-icon-mail-closed" value="Recuperar Senha"
-						onclick="varDialogResetarSenha.show()" type="button" />
+					<p:commandButton id="reset" value="Resetar Senha" icon="pi pi-cog"
+						action="#{dFViewBean.viewProducts}"
+						styleClass="mr-2 ui-button-outlined">
+						<f:ajax render="reset"></f:ajax>
+						</p:commandButton>
 				</p:panelGrid>
 
 			</h:form>
-			
+			<br /> <br />
 			<h:form>
 				<h:outputText value="Criar senha: " />
 				<p:password value="#{loginBean.senhaCriada}" size="37" />
@@ -50,7 +48,7 @@
 					action="#{loginBean.testeSenha()}" />
 			</h:form>
 
-			<h:form>
+			<h:form id="boxresetarsenha">
 				<p:dialog id="dialogResetarSenha" header="Resetar Senha"
 					widgetVar="varDialogResetarSenha" modal="true" showEffect="fade"
 					resizable="false" hideEffect="fade">

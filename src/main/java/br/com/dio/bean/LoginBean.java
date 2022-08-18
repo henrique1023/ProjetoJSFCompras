@@ -3,10 +3,9 @@ package br.com.dio.bean;
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 import br.com.dio.Session.SessionContext;
@@ -15,7 +14,7 @@ import br.com.dio.service.UserService;
 import br.com.dio.util.UserUtil;
 
 @Named
-@SessionScoped
+@ViewScoped
 public class LoginBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
