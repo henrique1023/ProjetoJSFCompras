@@ -51,7 +51,7 @@ public class LoginBean implements Serializable{
 	
 	public String doLogout() {
 		SessionContext.getInstance().encerrarSessao();
-		return "form_login.xhtml?faces-redirect=true";
+		return "/form_login.xhtml?faces-redirect=true";
 	}
 	
 	public void solicitarNovaSenha() {
