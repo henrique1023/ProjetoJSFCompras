@@ -8,13 +8,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "tb_user")
 public class User implements Serializable{
 
     /**
@@ -28,7 +30,6 @@ public class User implements Serializable{
     @GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
     private Integer id;
 
-
     @Column
     private String nome;
 
@@ -37,54 +38,66 @@ public class User implements Serializable{
 
     @Column
     private String senha;
+    
+    @ManyToOne
+	@JoinColumn(name = "id_typeUser")
+    private TypeUser typeUser;
 
     @Column(name = "data_cadastro")
     @Temporal(TemporalType.DATE)
     private Date dataCadastro;
 
-    public Integer getId() {
-              return id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-              this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getNome() {
-              return nome;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public void setNome(String nome) {
-              this.nome = nome.trim();
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public String getEmail() {
-              return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-              this.email = email.trim().toLowerCase();
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getSenha() {
-              return senha;
-    }
+	public String getSenha() {
+		return senha;
+	}
 
-    public void setSenha(String senha) {
-              this.senha = senha.trim();
-    }
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
-    public Date getDataCadastro() {
-              return dataCadastro;
-    }
+	public TypeUser getTypeUser() {
+		return typeUser;
+	}
 
-    public void setDataCadastro(Date dataCadastro) {
-              this.dataCadastro = dataCadastro;
-    }
+	public void setTypeUser(TypeUser typeUser) {
+		this.typeUser = typeUser;
+	}
+
+	public Date getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, senha);
+		return Objects.hash(email, id, senha);
 	}
 
 	@Override
@@ -96,10 +109,8 @@ public class User implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(id, other.id) && Objects.equals(senha, other.senha);
+		return Objects.equals(email, other.email) && Objects.equals(id, other.id) && Objects.equals(senha, other.senha);
 	}
-
     
-
-
+    
 }

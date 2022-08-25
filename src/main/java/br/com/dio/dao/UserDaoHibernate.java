@@ -1,6 +1,5 @@
 package br.com.dio.dao;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import br.com.dio.model.TypeUser;
 import br.com.dio.model.User;
 import br.com.dio.util.UserUtil;
 
@@ -74,7 +74,7 @@ public class UserDaoHibernate implements IUserDao {
 		System.out.println(email + senha);
 		StringBuffer sql = new StringBuffer();
 		String password = UserUtil.convertStringToMd5(senha);
-		sql.append("SELECT * FROM usuario c ");
+		sql.append("SELECT * FROM tb_user c ");
 		sql.append("WHERE c.email = '" + email + "' AND c.senha = '" + password + "'");
 		EntityManager entityManager = emf.createEntityManager();
 		Query query = entityManager.createNativeQuery(sql.toString());
@@ -103,6 +103,7 @@ public class UserDaoHibernate implements IUserDao {
 //		data = data.substring(0, 19).replace('-', '/');
 		// user.setDataCadastro(sdf.parse(data));
 		user.setDataCadastro(new Date());
+		user.setTypeUser(new TypeUser(Long.parseLong(retorno[5].toString()), null));
 
 		return user;
 	}

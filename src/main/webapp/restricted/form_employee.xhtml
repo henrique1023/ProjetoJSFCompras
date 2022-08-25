@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/Templates/templateMenusPrime.xhtml">
+	<h:head>
+	</h:head>
+	<h1>Cadastrar Evento</h1>
+	<p:messages rendered="true" showDetail="Chave necessario" />
+	<p:autoUpdate on="descrição" />
+
+	<!-- Como fazer uma lista com os itens inseridos -->
+	<h1>Lista de Eventos</h1>
+
+	<h:panelGroup styleClass="center" id="tableView">
+		<p:dataTable value="#{employeeBean.employees}" var="e" border="3"
+			id="table">
+			<p:column headerText="Nome">#{e.name}</p:column>
+			<p:column headerText="Sobrenome">#{e.lastname}</p:column>
+			<p:column headerText="CPF">#{e.cpf}</p:column>
+			<p:column headerText="Data de Aniversario">#{e.birthday}</p:column>
+		</p:dataTable>
+	</h:panelGroup>
+</ui:decorate>

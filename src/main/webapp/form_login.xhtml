@@ -27,6 +27,10 @@
 	margin: auto;
 	background-color: green;
 }
+
+.loginBox {
+	margin: auto;
+}
 </style>
 </h:head>
 <h:body>
@@ -43,7 +47,7 @@
 				<p:panelGrid contentStyleClass="align-items-baseline ui-fluid"
 					columns="8" layout="grid">
 					<p:panelGrid columns="2">
-					<span class="ui-input-icon-left"> <i class="pi pi-user" />
+					<span class="ui-input-icon-left loginBox"> <i class="pi pi-user" />
 						<p:inputText placeholder="Login" value="#{loginBean.login}"
 							required="true" />
 					</span>

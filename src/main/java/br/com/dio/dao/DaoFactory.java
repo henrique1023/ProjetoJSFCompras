@@ -10,5 +10,9 @@ public class DaoFactory {
 	public static UserDaoHibernate createUserDao() {
 		return new UserDaoHibernate(emf);
 	}
+	
+	public static EmployeeDaoHibernate createEmployeeDao() {
+		return new EmployeeDaoHibernate(emf);
+	}
 
 }

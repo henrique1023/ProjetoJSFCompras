@@ -15,10 +15,7 @@
 	<div class="formulario center">
 		<h:form id="form">
 			<p:panel>
-				<p:panelGrid columns="3"
-					columnClasses="ui-grid-col-2,ui-grid-col-4,ui-grid-col-2,ui-grid-col-4"
-					layout="grid" styleClass="ui-panelgrid-blank ui-fluid"
-					style="border:0px none; background-color:transparent;">
+				<p:panelGrid columns="3">
 					<p:outputLabel value="Nome do Empregado:" />
 					<p:inputText id="nome" value="#{employeeBean.employee.name}"
 						required="true" requiredMessage="Adicione um nome." />
@@ -40,7 +37,17 @@
 						requiredMessage="Adicione um aniversario.">
 					</p:calendar>
 					<p:message for="vendorStartDateInputTxt" display="text" />
-
+					<div class="field col-12 md:col-4">
+						<p:outputLabel value="Funções" />
+						<p:selectOneMenu id="funcao" value="#{employeeBean.employee.funcao}">
+							<f:selectItem itemLabel="Selecione uma função" itemValue=""/>
+							<f:selectItems value="#{employeeBean.funcoes}" />
+						</p:selectOneMenu>
+					</div>
+					<p:outputLabel value="Salario:" />
+					<p:inputText id="salario" value="#{employeeBean.employee.salary}" />
+					<p:outputLabel value="Telefone:" />
+					<p:inputText id="telefone" value="#{employeeBean.employee.telefone}" />
 					<h:panelGroup styleClass="center">
 						<h:commandButton id="btn-enviar" value="Cadastrar"
 							action="#{employeeBean.addEmployee}" uptade="form table">
@@ -52,17 +59,4 @@
 			</p:panel>
 		</h:form>
 	</div>
-
-	<!-- Como fazer uma lista com os itens inseridos -->
-	<h1>Lista de Eventos</h1>
-
-	<h:panelGroup styleClass="center" id="tableView">
-		<p:dataTable value="#{employeeBean.employees}" var="e" border="3"
-			id="table">
-			<p:column headerText="Nome">#{e.name}</p:column>
-			<p:column headerText="Sobrenome">#{e.lastname}</p:column>
-			<p:column headerText="CPF">#{e.cpf}</p:column>
-			<p:column headerText="Data de Aniversario">#{e.birthday}</p:column>
-		</p:dataTable>
-	</h:panelGroup>
 </ui:decorate>

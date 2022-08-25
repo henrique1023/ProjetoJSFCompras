@@ -11,7 +11,6 @@ import javax.inject.Named;
 import br.com.dio.Session.SessionContext;
 import br.com.dio.model.User;
 import br.com.dio.service.UserService;
-import br.com.dio.util.UserUtil;
 
 @Named
 @ViewScoped
@@ -23,7 +22,6 @@ public class LoginBean implements Serializable{
 	private String email;
 	private String login;
 	private String senha;
-	private String senhaCriada;
 	
 	@PostConstruct
 	public void init() {
@@ -39,13 +37,12 @@ public class LoginBean implements Serializable{
 		if (user == null) {
 			FacesContext context = FacesContext.getCurrentInstance();
 			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Senha ou Email incorretos!", ""));
-			System.out.println("Passou aqui");
 			FacesContext.getCurrentInstance().validationFailed();
 			return "";
 		}
 
 		SessionContext.getInstance().setAttribute("usuarioLogado", user);
-		return "/restricted/register_employee.xhtml?faces-redirect=true";
+		return "/restricted/form_employee.xhtml?faces-redirect=true";
 
 	}
 	
@@ -63,21 +60,6 @@ public class LoginBean implements Serializable{
 	
 	public String resetSenha() {
 		return "reset_senha.xhtml?faces-redirect=true";
-	}
-	
-	public void testeSenha() {
-		String senha2 = UserUtil.convertStringToMd5(senhaCriada);
-		System.out.println(senha2);
-	}
-	
-	
-
-	public String getSenhaCriada() {
-		return senhaCriada;
-	}
-
-	public void setSenhaCriada(String senhaCriada) {
-		this.senhaCriada = senhaCriada;
 	}
 
 	public String getEmail() {

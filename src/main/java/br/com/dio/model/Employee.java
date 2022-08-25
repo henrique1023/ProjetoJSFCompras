@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "tb_employee")
 public class Employee implements Serializable{
 	
 	/**
@@ -23,11 +23,13 @@ public class Employee implements Serializable{
 	@Column(name = "id_employee")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long registerEmployee;
+	
+	
 	private String name;
 	private String lastname;
 	private String cpf;
 	private String rg;
-	private FuncoesEnum funcao;
+	private String funcao;
 	private Date birthday;
 	private String telefone;
 	private Float salary;
@@ -35,8 +37,8 @@ public class Employee implements Serializable{
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Employee(Long registerEmployee, String name, String lastname, String cpf, String rg, FuncoesEnum funcao,
+
+	public Employee(Long registerEmployee, String name, String lastname, String cpf, String rg, String funcao,
 			Date birthday, String telefone, Float salary) {
 		super();
 		this.registerEmployee = registerEmployee;
@@ -49,113 +51,80 @@ public class Employee implements Serializable{
 		this.telefone = telefone;
 		this.salary = salary;
 	}
-
+	
+	
 
 	public Long getRegisterEmployee() {
 		return registerEmployee;
 	}
 
-
-
 	public void setRegisterEmployee(Long registerEmployee) {
 		this.registerEmployee = registerEmployee;
 	}
-
-
 
 	public String getName() {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 
 	public String getLastname() {
 		return lastname;
 	}
 
-
-
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-
-
 
 	public String getCpf() {
 		return cpf;
 	}
 
-
-
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
-
 
 	public String getRg() {
 		return rg;
 	}
 
-
-
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
 
-	public FuncoesEnum getFuncao() {
+	public String getFuncao() {
 		return funcao;
 	}
 
-
-
-	public void setFuncao(FuncoesEnum funcao) {
+	public void setFuncao(String funcao) {
 		this.funcao = funcao;
 	}
-
-
 
 	public Date getBirthday() {
 		return birthday;
 	}
 
-
-
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
-
-
 
 	public String getTelefone() {
 		return telefone;
 	}
 
-
-
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
-
 
 	public Float getSalary() {
 		return salary;
 	}
 
-
-
 	public void setSalary(Float salary) {
 		this.salary = salary;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -173,6 +142,13 @@ public class Employee implements Serializable{
 			return false;
 		Employee other = (Employee) obj;
 		return Objects.equals(registerEmployee, other.registerEmployee);
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [registerEmployee=" + registerEmployee + ", name=" + name + ", lastname=" + lastname + ", cpf="
+				+ cpf + ", rg=" + rg + ", funcao=" + funcao + ", birthday=" + birthday + ", telefone=" + telefone
+				+ ", salary=" + salary + "]";
 	}
 	
 	

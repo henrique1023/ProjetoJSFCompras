@@ -1,7 +1,5 @@
 package br.com.dio.model;
 
-import javax.persistence.Entity;
-
 public enum FuncoesEnum {
 	ADMINISTRADOR(1),
 	VENDEDOR(2),
