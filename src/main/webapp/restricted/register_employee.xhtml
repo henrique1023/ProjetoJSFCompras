@@ -37,22 +37,25 @@
 						requiredMessage="Adicione um aniversario.">
 					</p:calendar>
 					<p:message for="vendorStartDateInputTxt" display="text" />
-					<div class="field col-12 md:col-4">
-						<p:outputLabel value="Funções" />
-						<p:selectOneMenu id="funcao" value="#{employeeBean.employee.funcao}">
-							<f:selectItem itemLabel="Selecione uma função" itemValue=""/>
-							<f:selectItems value="#{employeeBean.funcoes}" />
-						</p:selectOneMenu>
-					</div>
+					<p:outputLabel value="Funções" />
+					<p:selectOneMenu id="funcao"
+						value="#{employeeBean.employee.funcao}">
+						<f:selectItem itemLabel="Selecione uma função" itemValue="" />
+						<f:selectItems value="#{employeeBean.funcoes}" />
+					</p:selectOneMenu>
+					<p:message for="funcao" />
+					<p:outputLabel value="Numero de Registro: " />
+					<p:inputText id="registro" value="#{employeeBean.employee.registerEmployee}" />
+					<p:message for="registro" />
 					<p:outputLabel value="Salario:" />
 					<p:inputText id="salario" value="#{employeeBean.employee.salary}" />
+					<p:message for="salario" />
 					<p:outputLabel value="Telefone:" />
-					<p:inputText id="telefone" value="#{employeeBean.employee.telefone}" />
+					<p:inputText id="telefone"
+						value="#{employeeBean.employee.telefone}" />
 					<h:panelGroup styleClass="center">
 						<h:commandButton id="btn-enviar" value="Cadastrar"
-							action="#{employeeBean.addEmployee}" uptade="form table">
-							<f:ajax execute="@form" render="@form tableView">
-							</f:ajax>
+							action="#{employeeBean.addEmployee}" uptade="form">
 						</h:commandButton>
 					</h:panelGroup>
 				</p:panelGrid>

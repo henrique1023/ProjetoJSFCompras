@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.com.dio.dao.DaoFactory;
-import br.com.dio.dao.EmployeeDaoHibernate;
 import br.com.dio.model.Employee;
 import br.com.dio.service.EmployeeService;
 
@@ -18,7 +17,7 @@ public class EmployeeBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private EmployeeService service;
+	private EmployeeService service = new EmployeeService();
 	
 	private Employee employee = new Employee();
 	
@@ -42,9 +41,12 @@ public class EmployeeBean implements Serializable{
 		this.employees = employees;
 	}
 	
-	public void addEmployee(){
-		service.saveOrUptade(employee);
+	public String addEmployee(){
+		employee.setId(-1);
+		Employee e = employee;
+		service.saveOrUptade(e);
 		clean();
+		return "form_employee.xhtml?faces-redirect=true";
 	}
 	
 	private void clean() {

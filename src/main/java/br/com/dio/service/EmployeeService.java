@@ -15,7 +15,7 @@ public class EmployeeService {
 	}
 	
 	public void saveOrUptade(Employee obj) {
-		if(obj.getRegisterEmployee() == null) {
+		if(obj.getRegisterEmployee() == -1) {
 			dao.insert(obj);
 		}else {
 			dao.update(obj);

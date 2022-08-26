@@ -22,7 +22,7 @@ public class EmployeeDaoHibernate implements IEmployee{
 	public void insert(Employee obj) {
 		EntityManager entityManager = emf.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
-		System.out.println(obj);
+		obj.setId(null);
 		transaction.begin();
 		entityManager.persist(obj);
 		transaction.commit();

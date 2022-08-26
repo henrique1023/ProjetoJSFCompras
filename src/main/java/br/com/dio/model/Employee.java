@@ -15,16 +15,13 @@ import javax.persistence.Table;
 @Table(name = "tb_employee")
 public class Employee implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "id_employee")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long registerEmployee;
+	private Integer id;
 	
-	
+	private Integer registerEmployee;
 	private String name;
 	private String lastname;
 	private String cpf;
@@ -38,9 +35,10 @@ public class Employee implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(Long registerEmployee, String name, String lastname, String cpf, String rg, String funcao,
-			Date birthday, String telefone, Float salary) {
+	public Employee(Integer id, Integer registerEmployee, String name, String lastname, String cpf, String rg,
+			String funcao, Date birthday, String telefone, Float salary) {
 		super();
+		this.id = id;
 		this.registerEmployee = registerEmployee;
 		this.name = name;
 		this.lastname = lastname;
@@ -51,14 +49,20 @@ public class Employee implements Serializable{
 		this.telefone = telefone;
 		this.salary = salary;
 	}
-	
-	
 
-	public Long getRegisterEmployee() {
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getRegisterEmployee() {
 		return registerEmployee;
 	}
 
-	public void setRegisterEmployee(Long registerEmployee) {
+	public void setRegisterEmployee(Integer registerEmployee) {
 		this.registerEmployee = registerEmployee;
 	}
 
@@ -128,9 +132,8 @@ public class Employee implements Serializable{
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(registerEmployee);
+		return Objects.hash(cpf, id, registerEmployee, rg);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -141,15 +144,18 @@ public class Employee implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Employee other = (Employee) obj;
-		return Objects.equals(registerEmployee, other.registerEmployee);
+		return Objects.equals(cpf, other.cpf) && Objects.equals(id, other.id)
+				&& Objects.equals(registerEmployee, other.registerEmployee) && Objects.equals(rg, other.rg);
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [registerEmployee=" + registerEmployee + ", name=" + name + ", lastname=" + lastname + ", cpf="
-				+ cpf + ", rg=" + rg + ", funcao=" + funcao + ", birthday=" + birthday + ", telefone=" + telefone
-				+ ", salary=" + salary + "]";
+		return "Employee [id=" + id + ", registerEmployee=" + registerEmployee + ", name=" + name + ", lastname="
+				+ lastname + ", cpf=" + cpf + ", rg=" + rg + ", funcao=" + funcao + ", birthday=" + birthday
+				+ ", telefone=" + telefone + ", salary=" + salary + "]";
 	}
+
+	
 	
 	
 }
