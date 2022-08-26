@@ -1,5 +1,7 @@
 package br.com.dio.dao;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,7 +65,7 @@ public class EmployeeDaoHibernate implements IEmployee{
 	public List<Employee> findAll() {
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT tb_employee.* FROM tb_emp " + "ORDER BY nomeEmployee");
+		sql.append("SELECT tb_employee.* FROM tb_employee " + "ORDER BY name");
 		EntityManager entityManager = emf.createEntityManager();
 		Query query = entityManager.createNativeQuery(sql.toString());
 		List<Object[]> EmployeeResultSet = query.getResultList();
@@ -80,8 +82,26 @@ public class EmployeeDaoHibernate implements IEmployee{
 	}
 
 	private Employee instatiateEmployee(Object[] o) {
-		// TODO Auto-generated method stub
-		return null;
+		Employee em = new Employee();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		em.setId(Integer.parseInt(o[0].toString()));
+		String data = o[1].toString();
+		data = data.substring(0, 19).replace('-', '/');
+		try {
+			em.setBirthday(sdf.parse(data));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		em.setCpf(o[2].toString());
+		em.setFuncao(o[3].toString());
+		em.setLastname(o[4].toString());
+		em.setName(o[5].toString());
+		em.setRegisterEmployee(Integer.parseInt(o[6].toString()));
+		em.setRg(o[7].toString());
+		em.setSalary(Float.parseFloat(o[8].toString()));
+		em.setTelefone(o[9].toString());
+		return em;
 	}
 
 }

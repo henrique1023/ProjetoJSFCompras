@@ -5,23 +5,34 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/Templates/templateMenusPrime.xhtml">
+	template="/restricted/Templates/templateMenusPrime.xhtml">
 	<h:head>
 	</h:head>
-	<h1>Cadastrar Evento</h1>
-	<p:messages rendered="true" showDetail="Chave necessario" />
-	<p:autoUpdate on="descrição" />
+	<h1>Lista de Empregados</h1>
+	<h:form>
+		<p:commandButton icon="pi pi-search" value="Pesquisar"
+			action="#{employeeBean.searchAllEmployee}">
+			<f:ajax execute="@form" render="tableView"></f:ajax>
+		</p:commandButton>
 
-	<!-- Como fazer uma lista com os itens inseridos -->
-	<h1>Lista de Eventos</h1>
-
+		<p:commandButton icon="pi pi-times" value="Limpar"
+			styleClass="ui-button-danger"
+			action="#{employeeBean.clearListEmployee}">
+			<f:ajax execute="@form" render="tableView"></f:ajax>
+		</p:commandButton>
+	</h:form>
 	<h:panelGroup styleClass="center" id="tableView">
 		<p:dataTable value="#{employeeBean.employees}" var="e" border="3"
 			id="table">
 			<p:column headerText="Nome">#{e.name}</p:column>
 			<p:column headerText="Sobrenome">#{e.lastname}</p:column>
 			<p:column headerText="CPF">#{e.cpf}</p:column>
-			<p:column headerText="Data de Aniversario">#{e.birthday}</p:column>
+			<p:column headerText="Data de Aniversario">#{e.dataFormat()}</p:column>
+			<p:column headerText="RG">#{e.rg}</p:column>
+			<p:column headerText="Numero de registro">#{e.registerEmployee}</p:column>
+			<p:column headerText="Salario">#{e.salary}</p:column>
+			<p:column headerText="Telefone">#{e.telefone}</p:column>
+			<p:column headerText="Função">#{e.funcao}</p:column>
 		</p:dataTable>
 	</h:panelGroup>
 </ui:decorate>

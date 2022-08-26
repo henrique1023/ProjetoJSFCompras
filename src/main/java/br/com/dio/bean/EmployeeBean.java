@@ -43,10 +43,17 @@ public class EmployeeBean implements Serializable{
 	
 	public String addEmployee(){
 		employee.setId(-1);
-		Employee e = employee;
-		service.saveOrUptade(e);
+		service.saveOrUptade(employee);
 		clean();
 		return "form_employee.xhtml?faces-redirect=true";
+	}
+	
+	public void searchAllEmployee() {
+		employees = service.findAll();
+	}
+	
+	public void clearListEmployee() {
+		employees = null;
 	}
 	
 	private void clean() {
@@ -55,9 +62,9 @@ public class EmployeeBean implements Serializable{
 	
 	public List<String> getFuncoes(){
 		List<String> funcoes = new ArrayList<String>();
-		funcoes.add("ADMINISTRADOR");
-		funcoes.add("VENDEDOR");
-		funcoes.add("ANALISTA");
+		funcoes.add("Administrador");
+		funcoes.add("Vendedor");
+		funcoes.add("Analista");
 		return funcoes;
 	}
 	

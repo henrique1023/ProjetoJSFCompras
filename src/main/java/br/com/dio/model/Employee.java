@@ -1,6 +1,7 @@
 package br.com.dio.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -49,7 +50,13 @@ public class Employee implements Serializable{
 		this.telefone = telefone;
 		this.salary = salary;
 	}
-
+	
+	public String dataFormat() {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String d = sdf.format(this.birthday);
+		System.out.println(d);
+		return d;
+	}
 	public Integer getId() {
 		return id;
 	}
