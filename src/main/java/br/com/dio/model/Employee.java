@@ -54,7 +54,6 @@ public class Employee implements Serializable{
 	public String dataFormat() {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		String d = sdf.format(this.birthday);
-		System.out.println(d);
 		return d;
 	}
 	public Integer getId() {

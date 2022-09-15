@@ -1,6 +1,7 @@
 package br.com.dio.dao;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,7 +10,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import br.com.dio.model.TypeUser;
 import br.com.dio.model.User;
 import br.com.dio.util.UserUtil;
 
@@ -28,6 +28,7 @@ public class UserDaoHibernate implements IUserDao {
 		transaction.begin();
 		// Criptografando a senha
 		String password = obj.getSenha();
+		obj.setDataCadastro(new Date());
 		password = UserUtil.convertStringToMd5(password);
 		obj.setSenha(password);
 		entityManager.persist(obj);
@@ -48,14 +49,28 @@ public class UserDaoHibernate implements IUserDao {
 
 	@Override
 	public User findById(User obj) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager entityManager = emf.createEntityManager();
+		obj = entityManager.find(User.class, obj.getId());
+		return obj;
 	}
 
 	@Override
 	public List<User> findByNome(String nome) {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuffer sql = new StringBuffer();
+		sql.append("SELECT * FROM tb_user c ");
+		sql.append("WHERE c.email = '" + nome +"'");
+		EntityManager entityManager = emf.createEntityManager();
+		Query query = entityManager.createNativeQuery(sql.toString());
+		List<Object[]> retorno = query.getResultList();
+		List<User> users = new ArrayList<>();
+		if (!retorno.isEmpty()) {
+			for (Object[] o : retorno) {
+				User userFound = instatiateUser(o);
+				users.add(userFound);
+			}
+			return users;
+		}
+		return users;
 	}
 
 	@Override
@@ -71,7 +86,6 @@ public class UserDaoHibernate implements IUserDao {
 	// Verifica se usuário existe ou se pode logar
 	public User isUserReadyToLogin(String email, String senha) {
 		email = email.toLowerCase().trim();
-		System.out.println(email + senha);
 		StringBuffer sql = new StringBuffer();
 		String password = UserUtil.convertStringToMd5(senha);
 		sql.append("SELECT * FROM tb_user c ");
@@ -83,13 +97,11 @@ public class UserDaoHibernate implements IUserDao {
 		if (!retorno.isEmpty()) {
 			for (Object[] o : retorno) {
 				User userFound = instatiateUser(o);
-				System.out.println(userFound);
 				return userFound;
 			}
 		}
 
 		return null;
-
 	}
 
 	private User instatiateUser(Object[] retorno) {
@@ -103,7 +115,7 @@ public class UserDaoHibernate implements IUserDao {
 //		data = data.substring(0, 19).replace('-', '/');
 		// user.setDataCadastro(sdf.parse(data));
 		user.setDataCadastro(new Date());
-		user.setTypeUser(new TypeUser(Long.parseLong(retorno[5].toString()), null));
+		user.setTypeUser(retorno[5].toString().charAt(0));
 
 		return user;
 	}

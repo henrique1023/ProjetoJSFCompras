@@ -39,13 +39,24 @@ public class User implements Serializable{
     @Column
     private String senha;
     
-    @ManyToOne
-	@JoinColumn(name = "id_typeUser")
-    private TypeUser typeUser;
+    private char typeUser;
 
     @Column(name = "data_cadastro")
     @Temporal(TemporalType.DATE)
     private Date dataCadastro;
+    
+    public User() {
+    	
+    };
+	public User(Integer id, String nome, String email, String senha, char typeUser, Date dataCadastro) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+		this.typeUser = typeUser;
+		this.dataCadastro = dataCadastro;
+	}
 
 	public Integer getId() {
 		return id;
@@ -79,14 +90,6 @@ public class User implements Serializable{
 		this.senha = senha;
 	}
 
-	public TypeUser getTypeUser() {
-		return typeUser;
-	}
-
-	public void setTypeUser(TypeUser typeUser) {
-		this.typeUser = typeUser;
-	}
-
 	public Date getDataCadastro() {
 		return dataCadastro;
 	}
@@ -94,7 +97,13 @@ public class User implements Serializable{
 	public void setDataCadastro(Date dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-
+	
+	public char getTypeUser() {
+		return typeUser;
+	}
+	public void setTypeUser(char typeUser) {
+		this.typeUser = typeUser;
+	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(email, id, senha);

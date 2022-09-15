@@ -1,5 +1,7 @@
 package br.com.dio.service;
 
+import java.util.List;
+
 import br.com.dio.dao.DaoFactory;
 import br.com.dio.dao.UserDaoHibernate;
 import br.com.dio.model.User;
@@ -16,9 +18,13 @@ public class UserService {
 		}
 	}
 	
+	public List<User> verificaSeExiste(String email) {
+		List<User> u = dao.findByNome(email);
+		return u;
+	}
+	
 	public User acessLogin(String email, String senha) {
 		User us = dao.isUserReadyToLogin(email, senha);
-		System.out.println(us);
 		return us;
 	}
 	
