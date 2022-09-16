@@ -7,24 +7,53 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/restricted/Templates/templateMenusPrime.xhtml">
 	<h:head>
-	<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
+		<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
+		<script>
+function excluir()
+{
+var x;
+var r=confirm("Escolha um valor!");
+if (r==true)
+  {
+  x="você pressionou OK!";
+  }
+else
+  {
+  x="Você pressionou Cancelar!";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
 	</h:head>
 	<h1>Lista de Empregados</h1>
 	<h:form id="form_button">
-		<p:commandButton class="buttonSt" id="button_search" icon="pi pi-search" value="Pesquisar"
+		<p:commandButton styleClass="buttonSt" id="button_search"
+			icon="pi pi-search" value="Pesquisar"
 			action="#{employeeBean.searchAllEmployee}">
 			<f:ajax execute="@form" render="tableView"></f:ajax>
 		</p:commandButton>
 
-		<p:commandButton class="button" id="button_clean" icon="pi pi-times" value="Limpar"
-			styleClass="ui-button-danger"
+		<p:commandButton class="button" id="button_clean" icon="pi pi-times"
+			value="Limpar" styleClass="ui-button-danger"
 			action="#{employeeBean.clearListEmployee}">
 			<f:ajax execute="@form" render="tableView"></f:ajax>
 		</p:commandButton>
+
 	</h:form>
 	<h:panelGroup styleClass="center" id="tableView">
 		<p:dataTable value="#{employeeBean.employees}" var="e" border="3"
 			id="table">
+			<p:column headerText="Opções">
+				<p:commandButton icon="pi pi-pencil"
+					styleClass="rounded-button ui-button-help"
+					action="#{employeeBean.editar(e)}">
+				</p:commandButton>
+				<p:growl id="growl" showDetail="true" />
+					<p:commandButton icon="pi pi-times"
+						styleClass="rounded-button ui-button-danger"
+			 onclick="funcao1(#{e.id})" >
+					</p:commandButton>
+			</p:column>
 			<p:column headerText="Nome">#{e.name}</p:column>
 			<p:column headerText="Sobrenome">#{e.lastname}</p:column>
 			<p:column headerText="CPF">#{e.cpf}</p:column>
