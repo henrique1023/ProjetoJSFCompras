@@ -9,64 +9,43 @@
 
 <h:head>
 	<title>Pagina</title>
-	<style>
-.login {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	width: 100%;
-	height: 100vh;
-}
-
-* {
-	padding: 0px;
-	margin: 0px;
-}
-
-.boxlogin {
-	margin: auto;
-	background-color: green;
-}
-
-.loginBox {
-	margin: auto;
-}
-</style>
+	<link rel="StyleSheet" type="text/css" href="./css/styles.css" />
 </h:head>
 <h:body>
 	<div id="container" class="login">
 
 		<div id="login_box" class="boxlogin">
 			<div id="logo_login"></div>
-			<h2></h2>
-			<p:autoUpdate on="true" />
-			<p:messages showDetail="detalhe" />
 			<h:form id="formLogin" enctype="multipart/form-data">
-
-				<p:growl autoUpdate="true" id="messages" />
+				
+				<p:autoUpdate class="mensagem" on="true" />
+				<p:messages class="mensagem" showDetail="detalhe" />
 				<p:panelGrid contentStyleClass="align-items-baseline ui-fluid"
 					columns="8" layout="grid">
 					<p:panelGrid columns="2">
-					<span class="ui-input-icon-left loginBox"> <i class="pi pi-user" />
-						<p:inputText placeholder="Login" value="#{loginBean.login}"
-							required="true" />
-					</span>
+						<span class="ui-input-icon-left loginBox"> <i
+							class="pi pi-user" /> 
+							<p:inputText placeholder="Login"
+								value="#{loginBean.login}" required="true" requiredMessage="Insira o login" />
+						</span>
 					</p:panelGrid>
 					<p:panelGrid columns="2">
-					<span class="ui-input-icon-left"> <i class="pi pi-lock" />
-						<p:password value="#{loginBean.senha}" placeholder="Senha" />
-					</span>
+						<span class="ui-input-icon-left"> <i class="pi pi-lock" />
+							<p:password value="#{loginBean.senha}" placeholder="Senha" />
+						</span>
 					</p:panelGrid>
-					
+
 				</p:panelGrid>
 				<p:panelGrid contentStyleClass="align-items-baseline ui-fluid"
-						columns="2" layout="grid">
-						<p:commandButton value="Entrar" action="#{loginBean.doLogin()}"
-							styleClass="ui-button-outlined ui-button-success" />
-						<p:commandButton id="reset" value="Resetar Senha"
-							action="#{loginBean.resetSenha}"
-							styleClass="ui-button-outlined ui-button-help" immediate="true" />
-					</p:panelGrid>
+					columns="2" layout="grid">
+					<p:commandButton id="entrar" value="Entrar"
+						action="#{loginBean.doLogin()}"
+						styleClass="ui-button-outlined ui-button-success" update="@form" />
+
+					<p:commandButton id="reset" value="Resetar Senha"
+						action="#{loginBean.resetSenha}"
+						styleClass="ui-button-outlined ui-button-help" immediate="true" />
+				</p:panelGrid>
 
 			</h:form>
 		</div>

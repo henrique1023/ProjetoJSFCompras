@@ -14,7 +14,8 @@
 		<h:form id="form">
 			<p:panel>
 				<p:panelGrid columns="3" styleClass="ui-panelgrid-blank ui-fluid"
-				 columnClasses="ui-grid-col-2, ui-grid-col-3"  layout="grid">
+					columnClasses="ui-grid-col-2, ui-grid-col-3, ui-grid-col-2"
+					layout="grid">
 					<p:outputLabel value="Nome do Empregado:" />
 					<p:inputText id="nome" value="#{employeeBean.employee.name}"
 						required="true" requiredMessage="Adicione um nome." />
@@ -44,7 +45,8 @@
 					</p:selectOneMenu>
 					<p:message for="funcao" />
 					<p:outputLabel value="Numero de Registro: " />
-					<p:inputText id="registro" value="#{employeeBean.employee.registerEmployee}" />
+					<p:inputText id="registro"
+						value="#{employeeBean.employee.registerEmployee}" />
 					<p:message for="registro" />
 					<p:outputLabel value="Salario:" />
 					<p:inputText id="salario" value="#{employeeBean.employee.salary}" />
@@ -52,11 +54,8 @@
 					<p:outputLabel value="Telefone:" />
 					<p:inputText id="telefone"
 						value="#{employeeBean.employee.telefone}" />
-					<h:panelGroup styleClass="center">
-						<h:commandButton id="btn-enviar" value="Cadastrar"
-							action="#{employeeBean.addEmployee}" uptade="form">
-						</h:commandButton>
-					</h:panelGroup>
+					<p:commandButton id="btn-enviar" value="Cadastrar"
+						action="#{employeeBean.addEmployee}" update="@form" />
 				</p:panelGrid>
 			</p:panel>
 		</h:form>
