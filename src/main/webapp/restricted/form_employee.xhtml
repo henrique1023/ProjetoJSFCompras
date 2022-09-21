@@ -9,7 +9,7 @@
 	<h:head>
 		<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
 		<script>
-function excluir()
+function excluir(id)
 {
 var x;
 var r=confirm("Escolha um valor!");
@@ -51,7 +51,8 @@ document.getElementById("demo").innerHTML=x;
 				<p:growl id="growl" showDetail="true" />
 					<p:commandButton icon="pi pi-times"
 						styleClass="rounded-button ui-button-danger"
-			 onclick="funcao1(#{e.id})" >
+					 action="#{employeeBean.instanciaDelete(e)}" >
+					 <f:ajax execute="@form"></f:ajax>
 					</p:commandButton>
 			</p:column>
 			<p:column headerText="Nome">#{e.name}</p:column>

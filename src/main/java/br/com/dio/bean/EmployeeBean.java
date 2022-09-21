@@ -2,18 +2,17 @@ package br.com.dio.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.context.Flash;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 import org.primefaces.PrimeFaces;
-import org.primefaces.event.SelectEvent;
 
 import br.com.dio.model.Employee;
 import br.com.dio.service.EmployeeService;
@@ -34,7 +33,10 @@ public class EmployeeBean implements Serializable {
 		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 		employee = (Employee) flash.get("employee");
 		if (employee == null) {
-			employee = new Employee();
+			employee = (Employee) flash.get("employeeDelete");
+			if (employee == null) {
+				employee = new Employee();
+			}
 		}
 	}
 
@@ -87,6 +89,24 @@ public class EmployeeBean implements Serializable {
 		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 		flash.put("employee", e);
 		return "register_employee?faces-redirect=true";
+	}
+
+	public void openDialog(Employee e) {
+		Map<String, Object> options = new HashMap<>();
+		options.put("modal", true);
+		options.put("resizable", false);
+		options.put("contentHeight", 200);
+		Map<String, List<String>> params = new HashMap<>();
+		params.put("meuParametro", Arrays.asList("" + e.getId()));
+		PrimeFaces.current().dialog().openDynamic("delete_dialog", options, params);
+	}
+
+	public void instanciaDelete(Employee e) {
+		openDialog(e);
+	}
+
+	public void closeDialog() {
+		PrimeFaces.current().dialog().closeDynamic(null);
 	}
 
 }

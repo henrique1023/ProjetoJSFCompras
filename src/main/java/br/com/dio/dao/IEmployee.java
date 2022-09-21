@@ -8,7 +8,7 @@ public interface IEmployee {
 	void insert(Employee obj);
 	void update(Employee obj);
 	void delete(Employee obj);
-	Employee findById(Employee obj);
+	Employee findById(int id);
 	List<Employee> findByNome(String nome);
 	List<Employee> findAll();
 }

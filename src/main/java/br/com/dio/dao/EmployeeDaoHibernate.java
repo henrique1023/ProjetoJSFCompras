@@ -44,14 +44,15 @@ public class EmployeeDaoHibernate implements IEmployee{
 		EntityManager entityManager = emf.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		entityManager.remove(entityManager.find(Employee.class, obj.getRegisterEmployee()));
+		entityManager.remove(entityManager.find(Employee.class, obj.getId()));
 		transaction.commit();
 	}
 
 	@Override
-	public Employee findById(Employee obj) {
+	public Employee findById(int id) {
+		Employee obj = new Employee();
 		EntityManager entityManager = emf.createEntityManager();
-		obj = entityManager.find(Employee.class, obj.getRegisterEmployee());
+		obj = entityManager.find(Employee.class, id);
 		return obj;
 	}
 

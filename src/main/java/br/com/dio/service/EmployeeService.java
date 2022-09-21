@@ -29,4 +29,8 @@ public class EmployeeService {
 	public List<Employee> findByNome(String nome){
 		return dao.findByNome(nome);
 	}
+	
+	public Employee findById(int id) {
+		return dao.findById(id);
+	}
 }	
