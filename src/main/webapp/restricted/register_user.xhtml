@@ -22,7 +22,7 @@
 					<p:outputLabel value="E-mail:" />
 					<p:inputText id="email" value="#{userCreateBean.user.email}"
 						required="true" requiredMessage="Adicione um email."
-						validator="#{validateBean.validateDuplicatedUser}" />
+						validator="#{validateBean.validateDuplicatedUser}" immediate="true" />
 					<p:message for="email" display="text" />
 
 					<p:outputLabel for="pwd1" styleClass="col-fixed"

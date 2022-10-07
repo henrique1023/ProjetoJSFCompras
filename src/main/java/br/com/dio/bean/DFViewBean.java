@@ -27,8 +27,8 @@ public class DFViewBean implements Serializable{
 	public void viewResetCustomized() {
 		Map<String, Object> options = new HashMap<>();
 		options.put("modal", true);
-		options.put("width", 640);
-		options.put("height", 340);
+		options.put("width", 400);
+		options.put("height", 200);
 		options.put("contentWidth", "100%");
 		options.put("contentHeight", "100%");
 		options.put("headerElement", "customheader");

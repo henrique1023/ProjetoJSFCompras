@@ -33,10 +33,7 @@ public class EmployeeBean implements Serializable {
 		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 		employee = (Employee) flash.get("employee");
 		if (employee == null) {
-			employee = (Employee) flash.get("employeeDelete");
-			if (employee == null) {
-				employee = new Employee();
-			}
+			employee = new Employee();
 		}
 	}
 

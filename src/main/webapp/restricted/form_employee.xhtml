@@ -27,7 +27,7 @@ document.getElementById("demo").innerHTML=x;
 	</h:head>
 	<h1>Lista de Empregados</h1>
 	<h:form id="form_button">
-		<p:commandButton styleClass="buttonSt" id="button_search"
+		<p:commandButton styleClass="ui-button-raised ui-button-help" id="button_search"
 			icon="pi pi-search" value="Pesquisar"
 			action="#{employeeBean.searchAllEmployee}">
 			<f:ajax execute="@form" render="tableView"></f:ajax>
