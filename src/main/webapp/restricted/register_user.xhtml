@@ -24,7 +24,13 @@
 						required="true" requiredMessage="Adicione um email."
 						validator="#{validateBean.validateDuplicatedUser}" immediate="true" />
 					<p:message for="email" display="text" />
-
+					<p:outputLabel value="Tipo de Usuario:" />
+					<p:selectOneMenu id="tipoUser"
+						value="#{userCreateBean.tipo}">
+						<f:selectItem itemLabel="Selecione o tipo" itemValue="" />
+						<f:selectItems value="#{userCreateBean.tipos}" />
+					</p:selectOneMenu>
+					<p:message for="tipoUser" display="text" />
 					<p:outputLabel for="pwd1" styleClass="col-fixed"
 						style="width:100px" value="Senha:" />
 					<p:password id="pwd1" value="#{userCreateBean.user.senha}"

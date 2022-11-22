@@ -37,7 +37,7 @@ public class User implements Serializable{
     @Column
     private String senha;
     
-    private char typeUser;
+    private FuncoesEnum typeUser;
 
     @Column(name = "data_cadastro")
     @Temporal(TemporalType.DATE)
@@ -46,7 +46,7 @@ public class User implements Serializable{
     public User() {
     	
     };
-	public User(Integer id, String nome, String email, String senha, char typeUser, Date dataCadastro) {
+	public User(Integer id, String nome, String email, String senha, FuncoesEnum typeUser, Date dataCadastro) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -96,10 +96,10 @@ public class User implements Serializable{
 		this.dataCadastro = dataCadastro;
 	}
 	
-	public char getTypeUser() {
+	public FuncoesEnum getTypeUser() {
 		return typeUser;
 	}
-	public void setTypeUser(char typeUser) {
+	public void setTypeUser(FuncoesEnum typeUser) {
 		this.typeUser = typeUser;
 	}
 	@Override

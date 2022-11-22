@@ -1,5 +1,6 @@
 package br.com.dio.dao;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,6 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import br.com.dio.model.FuncoesEnum;
 import br.com.dio.model.User;
 import br.com.dio.util.UserUtil;
 
@@ -106,16 +108,21 @@ public class UserDaoHibernate implements IUserDao {
 
 	private User instatiateUser(Object[] retorno) {
 		User user = new User();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		user.setId(Integer.parseInt(retorno[0].toString()));
 		user.setNome(retorno[3].toString());
 		user.setEmail(retorno[2].toString());
 		user.setSenha(retorno[4].toString());
-//		String data = retorno[1].toString();
-//		data = data.substring(0, 19).replace('-', '/');
-		// user.setDataCadastro(sdf.parse(data));
+		String data = retorno[1].toString();
+		try {
+			user.setDataCadastro(sdf.parse(data));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		user.setDataCadastro(new Date());
-		user.setTypeUser(retorno[5].toString().charAt(0));
+		user.setTypeUser(FuncoesEnum.funcaoById(Integer.parseInt(retorno[5].toString())));
+		
 
 		return user;
 	}
