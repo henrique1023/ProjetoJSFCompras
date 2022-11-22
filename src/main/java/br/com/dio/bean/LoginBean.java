@@ -43,7 +43,7 @@ public class LoginBean implements Serializable {
 		}
 
 		SessionContext.getInstance().setAttribute("usuarioLogado", user);
-		return "/restricted/form_employee.xhtml?faces-redirect=true";
+		return "/restricted/employeeList/form_employee.xhtml?faces-redirect=true";
 
 	}
 

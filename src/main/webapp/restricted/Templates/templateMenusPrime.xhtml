@@ -35,7 +35,7 @@
 			<p:divider layout="vertical" />
 			<p:submenu label="Usuarios" icon="pi pi-fw pi-user">
 				<p:menuitem value="Novo" icon="pi pi-fw pi-user-plus"
-					action="register_user?faces-redirect=true" />
+					action="/restricted/UserList/register_user?faces-redirect=true" />
 				<p:menuitem value="Delete" icon="pi pi-fw pi-user-minus" />
 				<p:submenu label="Search" icon="pi pi-fw pi-users">
 					<p:submenu label="Filter" icon="pi pi-fw pi-filter">
@@ -47,10 +47,10 @@
 			<p:divider layout="vertical" />
 			<p:submenu label="Empregado" icon="pi pi-fw pi-calendar">
 				<p:menuitem value="Pesquisar" icon="pi pi-fw pi-search"
-					action="form_employee?faces-redirect=true" />
+					action="/restricted/employeeList/form_employee?faces-redirect=true" />
 
 				<p:menuitem value="Criar" icon="pi pi-fw pi-plus"
-					action="register_employee?faces-redirect=true" />
+					action="/restricted/employeeList/register_employee?faces-redirect=true" />
 			</p:submenu>
 
 			<p:divider layout="vertical" />

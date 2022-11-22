@@ -59,7 +59,7 @@ public class EmployeeBean implements Serializable {
 		}
 		service.saveOrUptade(employee);
 		clean();
-		return "form_employee.xhtml?faces-redirect=true";
+		return "employeeList/form_employee.xhtml?faces-redirect=true";
 	}
 
 	public void searchAllEmployee() {
@@ -85,7 +85,7 @@ public class EmployeeBean implements Serializable {
 	public String editar(Employee e) {
 		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 		flash.put("employee", e);
-		return "register_employee?faces-redirect=true";
+		return "employeeList/register_employee?faces-redirect=true";
 	}
 
 	public void openDialog(Employee e) {

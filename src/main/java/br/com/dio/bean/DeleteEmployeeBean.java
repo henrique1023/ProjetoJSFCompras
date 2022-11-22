@@ -42,7 +42,7 @@ public class DeleteEmployeeBean implements Serializable {
 
 	public String closeDialog() {
 		PrimeFaces.current().dialog().closeDynamic(null);
-		return "form_employee?faces-redirect=true";
+		return "employeeList/form_employee?faces-redirect=true";
 	}
 
 	public void deleteEmployee() {

@@ -7,41 +7,41 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/restricted/Templates/templateMenusPrime.xhtml">
 	<h:head>
+		<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
 	</h:head>
-	<h1>Cadastrar Empregado</h1>
+	<h1>Usuario</h1>
 	<!-- criando os campos para inserir os dados -->
 	<div class="formulario center">
 		<h:form id="form">
+			<p:autoUpdate class="mensagem" on="true" />
+			<p:messages class="mensagem" showDetail="detalhe" />
 			<p:panel>
-				<p:panelGrid columns="3" styleClass="ui-panelgrid-blank ui-fluid"
+				<p:panelGrid columns="4" styleClass="ui-panelgrid-blank ui-fluid"
 					columnClasses="ui-grid-col-2, ui-grid-col-3" layout="grid">
 					<p:outputLabel value="Nome:" />
 					<p:inputText id="Nome" value="#{userCreateBean.user.nome}"
 						required="true" requiredMessage="Adicione um nome" />
-					<p:message for="Nome" display="text" />
 					<p:outputLabel value="E-mail:" />
 					<p:inputText id="email" value="#{userCreateBean.user.email}"
 						required="true" requiredMessage="Adicione um email."
-						validator="#{validateBean.validateDuplicatedUser}" immediate="true" />
-					<p:message for="email" display="text" />
+						validator="#{validateBean.validateDuplicatedUser}"
+						immediate="true" />
 					<p:outputLabel value="Tipo de Usuario:" />
-					<p:selectOneMenu id="tipoUser"
-						value="#{userCreateBean.tipo}">
+					<p:selectOneMenu id="tipoUser" value="#{userCreateBean.tipo}" required="true" requiredMessage="Adicione um tipo">
 						<f:selectItem itemLabel="Selecione o tipo" itemValue="" />
 						<f:selectItems value="#{userCreateBean.tipos}" />
 					</p:selectOneMenu>
-					<p:message for="tipoUser" display="text" />
+					<h:outputText></h:outputText>
+					<h:outputText></h:outputText>
 					<p:outputLabel for="pwd1" styleClass="col-fixed"
 						style="width:100px" value="Senha:" />
 					<p:password id="pwd1" value="#{userCreateBean.user.senha}"
-						match="pwd2" label="Password 1" required="true" requiredMessage="Senha obrigatoria"/>
-					<p:message for="pwd1" display="text" />
+						match="pwd2" label="Password 1" required="true"
+						requiredMessage="Senha obrigatoria" />
 					<p:outputLabel for="pwd2" styleClass="col-fixed"
 						style="width:100px" value="Confirme a senha:" />
 					<p:password id="pwd2" value="#{userCreateBean.user.senha}"
 						label="Password 2" required="true" />
-					<p:message for="pwd2" display="text" />
-					
 					<p:commandButton update="@form" value="Salvar"
 						action="#{userCreateBean.validarECriar}" />
 				</p:panelGrid>

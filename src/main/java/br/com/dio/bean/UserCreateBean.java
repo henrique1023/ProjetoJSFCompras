@@ -33,7 +33,7 @@ public class UserCreateBean implements Serializable {
 	public String validarECriar() {
 		setTipoUser();
 		userBO.saveOrUptade(user);
-		return "form_employee?faces-redirect=true";
+		return "employeeList/form_employee?faces-redirect=true";
 	}
 
 	private void setTipoUser() {
