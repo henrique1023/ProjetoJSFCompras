@@ -28,31 +28,15 @@ public class EmployeeBean implements Serializable {
 	private Employee employee = new Employee();
 
 	private List<Employee> employees = new ArrayList<>();
+	
+	private Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();;
 
 	public void init() {
-		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 		employee = (Employee) flash.get("employee");
 		if (employee == null) {
 			employee = new Employee();
 		}
 	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
-
-	public List<Employee> getEmployees() {
-		return employees;
-	}
-
-	public void setEmployees(List<Employee> employees) {
-		this.employees = employees;
-	}
-
 	public String addEmployee() {
 		if (employee.getId() == null) {
 			employee.setId(-1);
@@ -83,9 +67,9 @@ public class EmployeeBean implements Serializable {
 	}
 
 	public String editar(Employee e) {
-		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
+		flash.clear();
 		flash.put("employee", e);
-		return "employeeList/register_employee?faces-redirect=true";
+		return "/restricted/employeeList/register_employee?faces-redirect=true";
 	}
 
 	public void openDialog(Employee e) {
@@ -105,5 +89,23 @@ public class EmployeeBean implements Serializable {
 	public void closeDialog() {
 		PrimeFaces.current().dialog().closeDynamic(null);
 	}
+	
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
+
 
 }

@@ -31,4 +31,9 @@ public class UserService {
 	public void gerarNovaSenha(String login, String email) {
 		//implementar
 	}
+	
+	public List<User> findAll(){
+		List<User> result = dao.findAll();
+		return result;
+	}
 }

@@ -11,6 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import br.com.dio.model.Employee;
 import br.com.dio.model.FuncoesEnum;
 import br.com.dio.model.User;
 import br.com.dio.util.UserUtil;
@@ -75,10 +76,25 @@ public class UserDaoHibernate implements IUserDao {
 		return users;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+
+		StringBuffer sql = new StringBuffer();
+		sql.append("SELECT * FROM tb_user " + "ORDER BY nome");
+		EntityManager entityManager = emf.createEntityManager();
+		Query query = entityManager.createNativeQuery(sql.toString());
+		List<Object[]> EmployeeResultSet = query.getResultList();
+		List<User> list = new ArrayList<>();
+		if (!EmployeeResultSet.isEmpty()) {
+			for (Object[] o : EmployeeResultSet) {
+				User user;
+				user = instatiateUser(o);
+				list.add(user);
+			}
+		}
+
+		return list;
 	}
 
 	public void gerarNovaSenha(String login, String email) {

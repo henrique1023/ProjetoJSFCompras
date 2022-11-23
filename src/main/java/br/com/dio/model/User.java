@@ -1,6 +1,7 @@
 package br.com.dio.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -54,6 +55,12 @@ public class User implements Serializable{
 		this.senha = senha;
 		this.typeUser = typeUser;
 		this.dataCadastro = dataCadastro;
+	}
+	
+	public String dataFormat() {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String d = sdf.format(this.dataCadastro);
+		return d;
 	}
 
 	public Integer getId() {

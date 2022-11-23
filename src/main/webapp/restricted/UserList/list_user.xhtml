@@ -7,47 +7,40 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/restricted/Templates/templateMenusPrime.xhtml">
 	<h:head>
-		<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
+		<link rel="StyleSheet" type="text/css" href="./css/styles.css" />
 	</h:head>
-	<h1>Lista de Empregados</h1>
+	<h1>Usuarios</h1>
 	<h:form id="form_button">
 		<p:commandButton styleClass="ui-button-raised ui-button-help" id="button_search"
 			icon="pi pi-search" value="Pesquisar"
-			action="#{employeeBean.searchAllEmployee}">
+			action="#{userListBean.searchAllUsers}">
 			<f:ajax execute="@form" render="tableView"></f:ajax>
 		</p:commandButton>
 
 		<p:commandButton class="button" id="button_clean" icon="pi pi-times"
 			value="Limpar" styleClass="ui-button-danger"
-			action="#{employeeBean.clearListEmployee}">
+			action="#{userListBean.clearListUsers}">
 			<f:ajax execute="@form" render="tableView"></f:ajax>
 		</p:commandButton>
 
 	</h:form>
 	<h:panelGroup styleClass="center" id="tableView">
-		<p:dataTable value="#{employeeBean.employees}" var="e" border="3"
+		<p:dataTable value="#{userListBean.users}" var="e" border="3"
 			id="table">
 			<p:column headerText="Opções">
 				<p:commandButton icon="pi pi-pencil"
 					styleClass="rounded-button ui-button-help"
-					action="#{employeeBean.editar(e)}">
+					action="#{userListBean.editar(e)}">
 				</p:commandButton>
 				<p:growl id="growl" showDetail="true" />
 					<p:commandButton icon="pi pi-times"
 						styleClass="rounded-button ui-button-danger"
-					 action="#{employeeBean.instanciaDelete(e)}" >
-					 <f:ajax execute="@form" render="tableView"></f:ajax>
+					 action="#{userListBean.instanciaDelete(e)}" >
 					</p:commandButton>
 			</p:column>
-			<p:column headerText="Nome">#{e.name}</p:column>
-			<p:column headerText="Sobrenome">#{e.lastname}</p:column>
-			<p:column headerText="CPF">#{e.cpf}</p:column>
-			<p:column headerText="Data de Aniversario">#{e.dataFormat()}</p:column>
-			<p:column headerText="RG">#{e.rg}</p:column>
-			<p:column headerText="Numero de registro">#{e.registerEmployee}</p:column>
-			<p:column headerText="Salario">#{e.salary}</p:column>
-			<p:column headerText="Telefone">#{e.telefone}</p:column>
-			<p:column headerText="Função">#{e.funcao}</p:column>
+			<p:column headerText="Nome">#{e.nome}</p:column>
+			<p:column headerText="E-mail">#{e.email}</p:column>
+			<p:column headerText="Data de criação">#{e.dataFormat()}</p:column>
 		</p:dataTable>
 	</h:panelGroup>
 </ui:decorate>

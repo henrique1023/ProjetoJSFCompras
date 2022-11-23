@@ -9,6 +9,11 @@
 	<h:head>
 		<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
 	</h:head>
+	<f:metadata>
+		<f:viewAction action="#{userCreateBean.init()}" />
+	</f:metadata>
+	<h:inputHidden value="#{flash.keep}"/>
+       <h:inputHidden value="#{flash.user}"/>
 	<h1>Usuario</h1>
 	<!-- criando os campos para inserir os dados -->
 	<div class="formulario center">
@@ -27,7 +32,8 @@
 						validator="#{validateBean.validateDuplicatedUser}"
 						immediate="true" />
 					<p:outputLabel value="Tipo de Usuario:" />
-					<p:selectOneMenu id="tipoUser" value="#{userCreateBean.tipo}" required="true" requiredMessage="Adicione um tipo">
+					<p:selectOneMenu id="tipoUser" value="#{userCreateBean.tipo}" 
+					required="true" requiredMessage="Adicione um tipo">
 						<f:selectItem itemLabel="Selecione o tipo" itemValue="" />
 						<f:selectItems value="#{userCreateBean.tipos}" />
 					</p:selectOneMenu>

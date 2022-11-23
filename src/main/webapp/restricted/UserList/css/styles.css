@@ -36,3 +36,30 @@ body {
 	margin: auto;
 }
 
+h1 {
+	margin: auto;
+}
+
+body {
+	font-size: 16px;
+	font-family: Lato, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.modal {
+	width: 300px;
+}
+
+.modal-content {
+	width: 300px;
+}
+
+button.ui-button {
+	margin-right: .5rem;
+}
+
+form#form_button {
+	padding: 15px;
+}
+
