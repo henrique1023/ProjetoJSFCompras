@@ -46,7 +46,7 @@ public class EmployeeBean implements Serializable {
 		}
 		service.saveOrUptade(employee);
 		clean();
-		return "employeeList/form_employee.xhtml?faces-redirect=true";
+		return "/restricted/employeeList/form_employee.xhtml?faces-redirect=true";
 	}
 
 	public void searchAllEmployee() {

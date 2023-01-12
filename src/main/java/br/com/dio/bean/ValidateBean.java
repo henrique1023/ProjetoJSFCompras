@@ -34,4 +34,12 @@ public class ValidateBean implements Serializable {
             throw new ValidatorException(message);
         }
     }
+	
+	public void validateCpf(FacesContext facesContext, UIComponent uiComponent, Object o) throws ValidatorException {
+		String us = (String) o;
+        if (us.length() < 11 || us.length() > 11) {
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "CPF invalido");
+            throw new ValidatorException(message);
+        }
+    }
 }
