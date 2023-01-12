@@ -16,6 +16,7 @@ import org.primefaces.PrimeFaces;
 
 import br.com.dio.model.Employee;
 import br.com.dio.service.EmployeeService;
+import br.com.dio.util.EdicaoTextoDataTable;
 
 @Named
 @ViewScoped
@@ -28,6 +29,8 @@ public class EmployeeBean implements Serializable {
 	private Employee employee = new Employee();
 
 	private List<Employee> employees = new ArrayList<>();
+	
+	private EdicaoTextoDataTable edicao = new EdicaoTextoDataTable();
 	
 	private Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();;
 
@@ -57,7 +60,10 @@ public class EmployeeBean implements Serializable {
 	private void clean() {
 		this.employee = new Employee();
 	}
-
+	
+	public EdicaoTextoDataTable getEdicao() {
+		return edicao;
+	}
 	public List<String> getFuncoes() {
 		List<String> funcoes = new ArrayList<String>();
 		funcoes.add("Administrador");

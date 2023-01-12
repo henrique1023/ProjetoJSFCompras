@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import br.com.dio.util.EdicaoTextoDataTable;
+
 @Entity
 @Table(name = "tb_employee")
 public class Employee implements Serializable{
@@ -51,11 +53,6 @@ public class Employee implements Serializable{
 		this.salary = salary;
 	}
 	
-	public String dataFormat() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String d = sdf.format(this.birthday);
-		return d;
-	}
 	public Integer getId() {
 		return id;
 	}

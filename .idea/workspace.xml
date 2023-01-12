@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ProjetoJsf:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="443fd092-7e2c-4888-8c6d-947e6406d931" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/UserDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/UserDaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/css/stylesEmployee.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/stylesEmployee.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/form_employee.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/form_employee.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/Session/SessionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/Session/SessionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DFViewBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DFViewBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DeleteEmployeeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DeleteEmployeeBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/EmployeeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/EmployeeBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/LoginBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/UserCreateBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/UserCreateBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/ValidateBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/ValidateBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/EmployeeDaoHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/EmployeeDaoHibernate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/UserDaoHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/UserDaoHibernate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/ConsultaSerasa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/ConsultaSerasa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Empresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/FormaDePagamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/FormaDePagamento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Formulario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Formulario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/FuncoesEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/FuncoesEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Produto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/ProdutoPK.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/ProdutoPK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/StatusAprovacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/StatusAprovacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/service/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/util/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/util/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/util/UserUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/br.com.dio/ProjetoJsf/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/br.com.dio/ProjetoJsf/pom.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Jy2wezepTxW81mKhsvNs4jpLIg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/henrique/Documentos/ProjetoJSFCompras&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+        <option value="JBossConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="ProjetoJsf:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ProjetoJsf_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="5fec7b93-39b5-4565-9f78-caf4a7594fed" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="42859" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ProjetoJsf:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="443fd092-7e2c-4888-8c6d-947e6406d931" name="Changes" comment="" />
+      <created>1673036246165</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673036246165</updated>
+      <workItem from="1673036246673" duration="42000" />
+      <workItem from="1673036301522" duration="1608000" />
+      <workItem from="1673389354308" duration="2449000" />
+      <workItem from="1673561851698" duration="543000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

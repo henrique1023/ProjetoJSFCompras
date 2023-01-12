@@ -33,6 +33,7 @@ public class UserDaoHibernate implements IUserDao {
 		String password = obj.getSenha();
 		obj.setDataCadastro(new Date());
 		password = UserUtil.convertStringToMd5(password);
+		System.out.println(password);
 		obj.setSenha(password);
 		entityManager.persist(obj);
 		transaction.commit();

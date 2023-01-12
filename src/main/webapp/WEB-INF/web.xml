@@ -5,7 +5,7 @@
 	version="2.5">
 
 	<welcome-file-list>
-		<welcome-file>PrimeiraPagina.xhtml</welcome-file>
+		<welcome-file>form_login.xhtml</welcome-file>
 	</welcome-file-list>
 	<display-name>ProjetoJsf</display-name>
 	<!-- Esse context faz com que os comentarios não sejam combilados -->

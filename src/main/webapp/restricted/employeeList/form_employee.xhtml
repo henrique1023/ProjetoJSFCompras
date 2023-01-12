@@ -10,6 +10,7 @@
 		<link rel="StyleSheet" type="text/css" href="./css/stylesEmployee.css" />
 	</h:head>
 	<h1>Lista de Empregados</h1>
+	<p:growl id="growl" showDetail="true" />
 	<h:form id="form_button">
 		<p:commandButton styleClass="ui-button-raised ui-button-help" id="button_search"
 			icon="pi pi-search" value="Pesquisar"
@@ -26,28 +27,28 @@
 	</h:form>
 	<h:panelGroup styleClass="center" id="tableView">
 		<p:dataTable value="#{employeeBean.employees}" var="e" border="3"
-			id="table">
-			<p:column headerText="Opções">
+			id="table" rows="10" paginator="true" paginatorPosition="bottom" >
+			<p:column headerText="Opções" width="150">
 				<p:commandButton icon="pi pi-pencil"
 					styleClass="rounded-button ui-button-help"
 					action="#{employeeBean.editar(e)}">
 				</p:commandButton>
-				<p:growl id="growl" showDetail="true" />
+
 					<p:commandButton icon="pi pi-times"
 						styleClass="rounded-button ui-button-danger"
 					 action="#{employeeBean.instanciaDelete(e)}" >
 					 <f:ajax execute="@form" render="tableView"></f:ajax>
 					</p:commandButton>
 			</p:column>
-			<p:column headerText="Nome">#{e.name}</p:column>
-			<p:column headerText="Sobrenome">#{e.lastname}</p:column>
-			<p:column headerText="CPF">#{e.cpf}</p:column>
-			<p:column headerText="Data de Aniversario">#{e.dataFormat()}</p:column>
-			<p:column headerText="RG">#{e.rg}</p:column>
-			<p:column headerText="Numero de registro">#{e.registerEmployee}</p:column>
-			<p:column headerText="Salario">#{e.salary}</p:column>
-			<p:column headerText="Telefone">#{e.telefone}</p:column>
-			<p:column headerText="Função">#{e.funcao}</p:column>
+			<p:column width="150" headerText="Nome">#{e.name}</p:column>
+			<p:column width="150" headerText="Sobrenome">#{e.lastname}</p:column>
+			<p:column width="150" headerText="CPF">#{e.cpf}</p:column>
+			<p:column width="150" headerText="Data de Aniversario">#{employeeBean.edicao.dataFormat(e.birthday)}</p:column>
+			<p:column width="150" headerText="RG">#{e.rg}</p:column>
+			<p:column width="150" headerText="Numero de registro">#{e.registerEmployee}</p:column>
+			<p:column width="150" headerText="Salario">#{employeeBean.edicao.salaryFormat(e.salary)}</p:column>
+			<p:column width="150" headerText="Telefone">#{e.telefone}</p:column>
+			<p:column width="150" headerText="Função">#{e.funcao}</p:column>
 		</p:dataTable>
 	</h:panelGroup>
 </ui:decorate>
