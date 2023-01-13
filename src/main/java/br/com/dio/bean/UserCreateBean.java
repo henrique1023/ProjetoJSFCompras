@@ -25,7 +25,7 @@ public class UserCreateBean implements Serializable {
 
 	private UserService userBO = new UserService();
 	private User user = new User();
-	private String tipo;
+	private String tipo = "";
 	private Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 
 	@PostConstruct
@@ -34,6 +34,9 @@ public class UserCreateBean implements Serializable {
 		this.userBO = new UserService();
 		if(user == null) {
 			user = new User();
+		}
+		if(user != null) {
+			System.out.println(user.getId());
 		}
 	}
 
@@ -78,7 +81,7 @@ public class UserCreateBean implements Serializable {
 	}
 
 	public String getTipo() {
-		if(user != null) {
+		if(user != null && tipo != null) {
 			String teste = user.getTypeUser().toString();
 			if(teste.contentEquals("ADMINISTRADOR")) {
 				return "Administrador";

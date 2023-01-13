@@ -26,7 +26,7 @@
 	</h:form>
 	<h:panelGroup styleClass="center" id="tableView">
 		<p:dataTable value="#{userListBean.users}" var="e" border="3"
-			id="table">
+			id="table" rows="10" paginator="true" paginatorPosition="bottom">
 			<p:column headerText="Opções">
 				<p:commandButton icon="pi pi-pencil"
 					styleClass="rounded-button ui-button-help"

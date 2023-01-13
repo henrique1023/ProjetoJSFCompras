@@ -12,8 +12,8 @@
 	<f:metadata>
 		<f:viewAction action="#{userCreateBean.init()}" />
 	</f:metadata>
-	<h:inputHidden value="#{flash.keep}"/>
-       <h:inputHidden value="#{flash.user}"/>
+	<h:inputHidden value="#{flash.keep}" />
+	<h:inputHidden value="#{flash.user}" />
 	<h1>Usuario</h1>
 	<!-- criando os campos para inserir os dados -->
 	<div class="formulario center">
@@ -25,15 +25,14 @@
 					columnClasses="ui-grid-col-2, ui-grid-col-3" layout="grid">
 					<p:outputLabel value="Nome:" />
 					<p:inputText id="Nome" value="#{userCreateBean.user.nome}"
-						required="true" requiredMessage="Adicione um nome" maxlength="30"/>
+						required="true" requiredMessage="Adicione um nome" maxlength="30" />
 					<p:outputLabel value="E-mail:" />
 					<p:inputText id="email" value="#{userCreateBean.user.email}"
 						required="true" requiredMessage="Adicione um email."
-						validator="#{validateBean.validateDuplicatedUser}"
-						immediate="true" maxlength="60" />
+						maxlength="60" />
 					<p:outputLabel value="Tipo de Usuario:" />
-					<p:selectOneMenu id="tipoUser" value="#{userCreateBean.tipo}" 
-					required="true" requiredMessage="Adicione um tipo">
+					<p:selectOneMenu id="tipoUser" value="#{userCreateBean.tipo}"
+						required="true" requiredMessage="Adicione um tipo">
 						<f:selectItem itemLabel="Selecione o tipo" itemValue="" />
 						<f:selectItems value="#{userCreateBean.tipos}" />
 					</p:selectOneMenu>
@@ -47,8 +46,9 @@
 					<p:outputLabel for="pwd2" styleClass="col-fixed"
 						style="width:100px" value="Confirme a senha:" />
 					<p:password id="pwd2" value="#{userCreateBean.user.senha}"
-						label="Password 2" required="true" requiredMessage="Confirmação necessaria."/>
-					<p:commandButton update="@form" value="Salvar"
+						label="Password 2" required="true"
+						requiredMessage="Confirmação necessaria." />
+					<p:commandButton update="@form" value="Alterar"
 						action="#{userCreateBean.validarECriar}" />
 				</p:panelGrid>
 			</p:panel>

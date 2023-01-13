@@ -31,13 +31,17 @@ public class UserListBean implements Serializable {
 
 	private UserService userBO = new UserService();
 	private User user = new User();
-	private String tipo;
+	private String tipo = "a";
 	private List<User> users = new ArrayList<>();
 	private Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
 
 	@PostConstruct
 	public void init() {
+		user = (User) flash.get("user");
 		this.userBO = new UserService();
+		if(user == null) {
+			user = new User();
+		}
 	}
 	
 	public void searchAllUsers() {
@@ -50,7 +54,7 @@ public class UserListBean implements Serializable {
 	
 	public String editar(User e) {
 		flash.put("user", e);
-		return "/restricted/UserList/register_user?faces-redirect=true";
+		return "/restricted/UserList/alter_user?faces-redirect=true";
 	}
 
 	@SuppressWarnings("unused")
@@ -66,13 +70,13 @@ public class UserListBean implements Serializable {
 
 	public List<String> getTipos() {
 		List<String> tipos = new ArrayList<String>();
-		tipos.add("ADMINISTRADOR");
+		tipos.add("Administrador");
 		tipos.add("Vendedor");
 		tipos.add("Analista");
 		return tipos;
 	}
 	
-	public void openDialog(Employee e) {
+	public void openDialog(User e) {
 		Map<String, Object> options = new HashMap<>();
 		options.put("modal", true);
 		options.put("resizable", false);
@@ -82,7 +86,7 @@ public class UserListBean implements Serializable {
 		PrimeFaces.current().dialog().openDynamic("delete_dialog", options, params);
 	}
 
-	public void instanciaDelete(Employee e) {
+	public void instanciaDelete(User e) {
 		openDialog(e);
 	}
 

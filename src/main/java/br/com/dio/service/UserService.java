@@ -32,6 +32,10 @@ public class UserService {
 		//implementar
 	}
 	
+	public User findById(int cod) {
+		return null;
+	}
+	
 	public List<User> findAll(){
 		List<User> result = dao.findAll();
 		return result;
