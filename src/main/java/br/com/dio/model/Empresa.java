@@ -20,7 +20,7 @@ public class Empresa implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name = "id_empresa")
+	@Column(name = "id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer idEmpresa;
 	private String nomeEmpresa;

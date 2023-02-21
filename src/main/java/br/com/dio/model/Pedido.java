@@ -4,32 +4,24 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_pedido")
 public class Pedido implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@Column(name = "cod_pedido")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long codPedido;
-	
 	private Double totalPedido;
 	private Double totalPreco;
 	private FormaDePagamento formaPagamento;
+
+	@ManyToOne
+	@JoinColumn(name="empresa_id")
+	private Empresa empresa;
 	
 	@OneToMany
 	@JoinColumn(name = "produtos_id")
@@ -48,8 +40,6 @@ public class Pedido implements Serializable {
 		this.formaPagamento = formaPagamento;
 		this.produtos = produtos;
 	}
-
-
 
 	public long getCodPedido() {
 		return codPedido;
@@ -90,7 +80,12 @@ public class Pedido implements Serializable {
 	public void setProdutos(List<ProdutoPK> produtos) {
 		this.produtos = produtos;
 	}
-	
-	
 
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
 }
