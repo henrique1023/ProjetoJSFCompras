@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui" lang="pt-br">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:p="http://primefaces.org/ui" lang="pt-br">
 
 <h:head>
-	<link rel="StyleSheet" type="text/css" href="./css/styles.css" />
-	<title>Controle Vendas</title>
+    <link rel="StyleSheet" type="text/css" href="./css/styles.css"/>
+    <title>Controle Vendas</title>
 </h:head>
 <h:body>
-	<h:form id="template_Form">
-		<p:growl id="messages" />
+    <h:form id="template_Form">
+        <p:growl id="messages"/>
 
-		<p:menubar id="menubar_template">
-			<p:submenu label="File" icon="pi pi-fw pi-file">
-				<p:submenu label="New" icon="pi pi-fw pi-plus">
-					<p:menuitem value="Bookmark" icon="pi pi-fw pi-bookmark" />
-					<p:menuitem value="Video" icon="pi pi-fw pi-video" />
-				</p:submenu>
-				<p:menuitem value="Delete" icon="pi pi-fw pi-trash" />
-				<p:divider />
-				<p:menuitem value="Export" icon="pi pi-fw pi-external-link" />
-			</p:submenu>
-			<p:divider layout="vertical" />
-			<p:submenu label="Edit" icon="pi pi-fw pi-pencil">
-				<p:menuitem value="Left" icon="pi pi-fw pi-align-left" />
-				<p:menuitem value="Right" icon="pi pi-fw pi-align-right" />
-				<p:menuitem value="Center" icon="pi pi-fw pi-align-center" />
-				<p:menuitem value="Justify" icon="pi pi-fw pi-align-justify" />
-			</p:submenu>
-			<p:divider layout="vertical" />
-			<p:submenu label="Usuarios" icon="pi pi-fw pi-user">
-				<p:menuitem value="Pesquisar" icon="pi pi-fw pi-search"
-					action="/restricted/UserList/list_user?faces-redirect=true" />
-				<p:menuitem value="Novo" icon="pi pi-fw pi-plus"
-					action="/restricted/UserList/register_user?faces-redirect=true" />
-			</p:submenu>
-			<p:divider layout="vertical" />
-			<p:submenu label="Empregado" icon="pi pi-fw pi-calendar">
-				<p:menuitem value="Pesquisar" icon="pi pi-fw pi-search"
-					action="/restricted/employeeList/form_employee?faces-redirect=true" />
+        <p:menubar id="menubar_template">
+            <p:submenu label="File" icon="pi pi-fw pi-file">
+                <p:submenu label="New" icon="pi pi-fw pi-plus">
+                    <p:menuitem value="Bookmark" icon="pi pi-fw pi-bookmark"/>
+                    <p:menuitem value="Video" icon="pi pi-fw pi-video"/>
+                </p:submenu>
+                <p:menuitem value="Delete" icon="pi pi-fw pi-trash"/>
+                <p:divider/>
+                <p:menuitem value="Export" icon="pi pi-fw pi-external-link"/>
+            </p:submenu>
 
-				<p:menuitem value="Novo" icon="pi pi-fw pi-plus"
-					action="/restricted/employeeList/register_employee?faces-redirect=true" />
-			</p:submenu>
+            <p:divider layout="vertical"/>
+            <p:submenu label="Edit" icon="pi pi-fw pi-pencil">
+                <p:menuitem value="Left" icon="pi pi-fw pi-align-left"/>
+                <p:menuitem value="Right" icon="pi pi-fw pi-align-right"/>
+                <p:menuitem value="Center" icon="pi pi-fw pi-align-center"/>
+                <p:menuitem value="Justify" icon="pi pi-fw pi-align-justify"/>
+            </p:submenu>
 
-			<p:divider layout="vertical" />
-			<f:facet name="options">
-				<div id="Pesquisa" class="ui-input-icon-left mr-2 boxPesquisa">
-					<i class="pi pi-fw pi-search" />
-					<p:inputText placeholder="Pesquisar Menu" />
-				</div>
-				<p:commandButton value="Logout" action="#{loginBean.doLogout}"
-					icon="pi pi-fw pi-sign-out"
-					styleClass="ui-button-raised ui-button-help" />
-			</f:facet>
-		</p:menubar>
-	</h:form>
-	<ui:insert></ui:insert>
+            <c:if test="#{userUtils.typeUser() == 1}">
+                <p:divider layout="vertical"/>
+                <p:submenu label="Usuarios" icon="pi pi-fw pi-user">
+                    <p:menuitem value="Pesquisar" icon="pi pi-fw pi-search"
+                                action="/restricted/UserList/list_user?faces-redirect=true"/>
+                    <p:menuitem value="Novo" icon="pi pi-fw pi-plus"
+                                action="/restricted/UserList/register_user?faces-redirect=true"/>
+                </p:submenu>
+                <p:divider layout="vertical"/>
+                <p:submenu label="Empregado" icon="pi pi-fw pi-calendar">
+                    <p:menuitem value="Pesquisar" icon="pi pi-fw pi-search"
+                                action="/restricted/employeeList/form_employee?faces-redirect=true"/>
+
+                    <p:menuitem value="Novo" icon="pi pi-fw pi-plus"
+                                action="/restricted/employeeList/register_employee?faces-redirect=true"/>
+                </p:submenu>
+            </c:if>
+
+            <p:divider layout="vertical"/>
+
+            <f:facet name="options">
+                <div id="Pesquisa" class="ui-input-icon-left mr-2 boxPesquisa">
+                    <i class="pi pi-fw pi-search"/>
+                    <p:inputText placeholder="Pesquisar Menu"/>
+                </div>
+                <p:commandButton value="Logout" action="#{loginBean.doLogout}"
+                                 icon="pi pi-fw pi-sign-out"
+                                 styleClass="ui-button-raised ui-button-help"/>
+            </f:facet>
+        </p:menubar>
+    </h:form>
+    <ui:insert></ui:insert>
 </h:body>
 
 </html>

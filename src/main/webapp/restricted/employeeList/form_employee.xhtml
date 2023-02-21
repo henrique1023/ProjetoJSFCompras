@@ -13,8 +13,7 @@
 	<p:growl id="growl" showDetail="true" />
 	<h:form id="form_button">
 		<p:commandButton styleClass="ui-button-raised ui-button-help" id="button_search"
-			icon="pi pi-search" value="Pesquisar"
-			action="#{employeeBean.searchAllEmployee}">
+			icon="pi pi-search" value="Pesquisar" action="#{employeeBean.searchAllEmployee()}">
 			<f:ajax execute="@form" render="tableView"></f:ajax>
 		</p:commandButton>
 

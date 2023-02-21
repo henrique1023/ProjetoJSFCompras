@@ -81,7 +81,7 @@ public class UserCreateBean implements Serializable {
 	}
 
 	public String getTipo() {
-		if(user != null && tipo != null) {
+		if(user.getTypeUser() != null && tipo != null ) {
 			String teste = user.getTypeUser().toString();
 			if(teste.contentEquals("ADMINISTRADOR")) {
 				return "Administrador";

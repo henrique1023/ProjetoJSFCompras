@@ -10,15 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="443fd092-7e2c-4888-8c6d-947e6406d931" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/UserDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/UserDaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/css/stylesEmployee.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/stylesEmployee.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/Session/SessionContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/Session/SessionContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserCreateBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserCreateBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/templateMenusPrime.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/templateMenusPrime.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/form_employee.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/form_employee.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/register_employee.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/register_employee.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/Session/SessionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/Session/SessionContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DFViewBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DFViewBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DeleteEmployeeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DeleteEmployeeBean.class" afterDir="false" />
@@ -46,17 +49,24 @@
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/util/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/util/LoginFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/util/UserUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/br.com.dio/ProjetoJsf/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/br.com.dio/ProjetoJsf/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserUtils.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -84,9 +94,10 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/henrique/Documentos/ProjetoJSFCompras&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/multiportal/Documents/ProjetoJSFCompras&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -109,8 +120,10 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
+    <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="ProjetoJsf:war">
@@ -120,7 +133,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="5fec7b93-39b5-4565-9f78-caf4a7594fed" />
+        <option name="BASE_DIRECTORY_NAME" value="923e661e-46f6-49c3-8325-a9cc2541d664" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -128,7 +141,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="42859" />
+        <option name="DEBUG_PORT" value="49711" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -192,7 +205,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
+        <option name="BuildArtifacts" enabled="false">
           <artifact name="ProjetoJsf:war" />
         </option>
       </method>
@@ -210,6 +223,9 @@
       <workItem from="1673036301522" duration="1608000" />
       <workItem from="1673389354308" duration="2449000" />
       <workItem from="1673561851698" duration="543000" />
+      <workItem from="1676907919805" duration="948000" />
+      <workItem from="1676908893753" duration="9567000" />
+      <workItem from="1677001957379" duration="164000" />
     </task>
     <servers />
   </component>
