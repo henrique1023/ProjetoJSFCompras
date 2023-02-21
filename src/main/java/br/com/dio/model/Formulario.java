@@ -33,6 +33,15 @@ public class Formulario implements Serializable {
 	private Double valorAprovado;
 	private Double valorAvista;
 	private StatusAprovacao status;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	
 	@ManyToOne
 	@JoinColumn(name = "empresa_id")

@@ -34,6 +34,15 @@ public class Empresa implements Serializable{
 	private String estado;
 	private Double balanco;
 	private Double lucro;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	
 	public Empresa() {
 		// TODO Auto-generated constructor stub

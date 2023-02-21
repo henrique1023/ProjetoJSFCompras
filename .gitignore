@@ -3,4 +3,4 @@
 *.prefs
 *.log
 *.class
-workspace.xml
+/workspace.xml

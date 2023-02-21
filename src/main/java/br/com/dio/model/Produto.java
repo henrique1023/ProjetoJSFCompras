@@ -13,10 +13,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_produto")
 public class Produto implements Serializable {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -31,6 +27,15 @@ public class Produto implements Serializable {
 	private  Double pesoProduto;
 	@Column(name="preco")
 	private Double precoProduto;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	
 	public Produto() {
 		// TODO Auto-generated constructor stub

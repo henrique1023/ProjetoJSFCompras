@@ -7,12 +7,12 @@ import javax.inject.Named;
 import java.io.Serializable;
 import br.com.dio.model.User;
 
-@Named()
+@Named
 @RequestScoped
 public class UserUtils implements Serializable {
-
+    private static User user = SessionContext.getInstance().getUsuarioLogado();
     public static int typeUser(){
-        String tipo = SessionContext.getInstance().getUsuarioLogado().getTypeUser().toString();
+        String tipo = user.getTypeUser().toString();
         if("ADMINISTRADOR".contentEquals(tipo)){
             return 1;
         }
@@ -20,5 +20,8 @@ public class UserUtils implements Serializable {
             return 2;
         }
         return 3;
+    }
+    public static int getAppId(){
+        return user.getAppId();
     }
 }

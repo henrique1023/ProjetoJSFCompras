@@ -18,6 +18,15 @@ public class Pedido implements Serializable {
 	private Double totalPedido;
 	private Double totalPreco;
 	private FormaDePagamento formaPagamento;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 
 	@ManyToOne
 	@JoinColumn(name="empresa_id")

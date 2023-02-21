@@ -30,6 +30,15 @@ public class ProdutoPK implements Serializable{
 	private Produto produto;
 	private int quantidade;
 	private double total;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	
 	public ProdutoPK() {
 		// TODO Auto-generated constructor stub

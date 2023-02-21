@@ -28,11 +28,19 @@ public class ConsultaSerasa implements Serializable{
 	private String riscoSerasa;
 	private Integer scoreSerasa;
 	private Integer numConsultaSerasa;
-	
 	@ManyToOne
 	@JoinColumn(name = "empresa_id")
 	private Empresa empresa;
-	
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
+
 	public ConsultaSerasa() {
 		// TODO Auto-generated constructor stub
 	}

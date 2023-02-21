@@ -10,7 +10,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import br.com.dio.bean.UserUtils;
 import br.com.dio.model.Employee;
+import br.com.dio.util.SQLUtils;
 
 public class EmployeeDaoHibernate implements IEmployee{
 	
@@ -25,6 +27,8 @@ public class EmployeeDaoHibernate implements IEmployee{
 		EntityManager entityManager = emf.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		obj.setId(null);
+		obj.setAppId(UserUtils.getAppId());
+		System.out.println(obj.getAppId());
 		transaction.begin();
 		entityManager.persist(obj);
 		transaction.commit();
@@ -64,9 +68,21 @@ public class EmployeeDaoHibernate implements IEmployee{
 
 	@Override
 	public List<Employee> findAll() {
-
+		String where = SQLUtils.builderWhere(UserUtils.getAppId(), "");
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT tb_employee.* FROM tb_employee " + "ORDER BY name");
+		sql.append("SELECT vo.id_employee, " +
+				"vo.birthday, " +
+				"vo.cpf, " +
+				"vo.funcao, " +
+				"vo.lastname, " +
+				"vo.name, " +
+				"vo.registerEmployee, " +
+				"vo.rg, " +
+				"vo.salary, " +
+				"vo.telefone " +
+				"FROM tb_employee vo" +
+				where +
+				"ORDER BY name");
 		EntityManager entityManager = emf.createEntityManager();
 		Query query = entityManager.createNativeQuery(sql.toString());
 		List<Object[]> EmployeeResultSet = query.getResultList();
@@ -91,7 +107,6 @@ public class EmployeeDaoHibernate implements IEmployee{
 		try {
 			em.setBirthday(sdf.parse(data));
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		em.setCpf(o[2].toString());
