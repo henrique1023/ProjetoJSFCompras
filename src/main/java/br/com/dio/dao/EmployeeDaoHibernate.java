@@ -85,10 +85,10 @@ public class EmployeeDaoHibernate implements IEmployee{
 				"ORDER BY name");
 		EntityManager entityManager = emf.createEntityManager();
 		Query query = entityManager.createNativeQuery(sql.toString());
-		List<Object[]> EmployeeResultSet = query.getResultList();
+		List<Object[]> employeeResultSet = query.getResultList();
 		List<Employee> list = new ArrayList<>();
-		if (!EmployeeResultSet.isEmpty()) {
-			for (Object[] o : EmployeeResultSet) {
+		if (!employeeResultSet.isEmpty()) {
+			for (Object[] o : employeeResultSet) {
 				Employee emp;
 				emp = instatiateEmployee(o);
 				list.add(emp);

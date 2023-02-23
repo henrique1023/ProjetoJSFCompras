@@ -35,6 +35,7 @@ public class Empresa implements Serializable{
 	private Double balanco;
 	private Double lucro;
 	private int appId;
+	private boolean deletado = false;
 
 	public int getAppId() {
 		return appId;
@@ -160,6 +161,10 @@ public class Empresa implements Serializable{
 
 	public void setLucro(Double lucro) {
 		this.lucro = lucro;
+	}
+
+	public void setDeletado(boolean deletado) {
+		this.deletado = deletado;
 	}
 
 	@Override
