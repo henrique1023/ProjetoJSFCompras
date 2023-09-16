@@ -38,4 +38,13 @@
 	<session-config>
 		<session-timeout>15</session-timeout>
 	</session-config>
+	   <context-param>
+        <param-name>com.sun.faces.numberOfLogicalViews</param-name>
+        <param-value>2</param-value>
+    </context-param>
+    
+    <error-page>
+        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+        <location>/form_login.xhtml</location>
+    </error-page>
 </web-app>
