@@ -20,7 +20,7 @@ public class Empresa implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name = "id_empresa")
+	@Column(name = "id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer idEmpresa;
 	private String nomeEmpresa;
@@ -34,6 +34,16 @@ public class Empresa implements Serializable{
 	private String estado;
 	private Double balanco;
 	private Double lucro;
+	private int appId;
+	private boolean deletado = false;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	
 	public Empresa() {
 		// TODO Auto-generated constructor stub
@@ -151,6 +161,10 @@ public class Empresa implements Serializable{
 
 	public void setLucro(Double lucro) {
 		this.lucro = lucro;
+	}
+
+	public void setDeletado(boolean deletado) {
+		this.deletado = deletado;
 	}
 
 	@Override

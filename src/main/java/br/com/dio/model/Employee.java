@@ -33,7 +33,16 @@ public class Employee implements Serializable{
 	private Date birthday;
 	private String telefone;
 	private Float salary;
-	
+
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}

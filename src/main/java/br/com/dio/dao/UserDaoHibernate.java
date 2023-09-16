@@ -11,6 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import br.com.dio.bean.UserUtils;
 import br.com.dio.model.Employee;
 import br.com.dio.model.FuncoesEnum;
 import br.com.dio.model.User;
@@ -31,6 +32,7 @@ public class UserDaoHibernate implements IUserDao {
 		transaction.begin();
 		// Criptografando a senha
 		String password = obj.getSenha();
+		obj.setAppId(UserUtils.getAppId());
 		obj.setDataCadastro(new Date());
 		password = UserUtil.convertStringToMd5(password);
 		obj.setSenha(password);
@@ -112,12 +114,18 @@ public class UserDaoHibernate implements IUserDao {
 		email = email.toLowerCase().trim();
 		StringBuffer sql = new StringBuffer();
 		String password = UserUtil.convertStringToMd5(senha);
-		sql.append("SELECT * FROM tb_user c ");
-		sql.append("WHERE c.email = '" + email + "' AND c.senha = '" + password + "'");
+		sql.append("SELECT vo.id, " +
+				"vo.data_cadastro, " +
+				"vo.email, " +
+				"vo.nome, " +
+				"vo.senha, " +
+				"vo.typeUser, " +
+				"vo.appId" +
+				" FROM tb_user vo ");
+		sql.append("WHERE vo.email = '" + email + "' AND vo.senha = '" + password + "'");
 		EntityManager entityManager = emf.createEntityManager();
 		Query query = entityManager.createNativeQuery(sql.toString());
 		List<Object[]> retorno = query.getResultList();
-
 		if (!retorno.isEmpty()) {
 			for (Object[] o : retorno) {
 				User userFound = instatiateUser(o);
@@ -134,7 +142,7 @@ public class UserDaoHibernate implements IUserDao {
 		user.setId(Integer.parseInt(retorno[0].toString()));
 		user.setNome(retorno[3].toString());
 		user.setEmail(retorno[2].toString());
-		user.setSenha(retorno[4].toString());
+		user.setAppId(Integer.parseInt(retorno[6].toString()));
 		String data = retorno[1].toString();
 		try {
 			user.setDataCadastro(sdf.parse(data));

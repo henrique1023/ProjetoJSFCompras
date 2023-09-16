@@ -40,7 +40,7 @@
 					<p:outputLabel value="Data aniversário:" />
 					<p:calendar value="#{employeeBean.employee.birthday}"
 						id="vendorStartDateInputTxt" pattern="dd/MM/yyyy" required="true"
-						requiredMessage="Adicione um aniversario.">
+						requiredMessage="Adicione um aniversario." style="max-width: 40px; height: 40px;">
 					</p:calendar>
 					<p:message for="vendorStartDateInputTxt" display="text" />
 					<p:outputLabel value="Funções" />
@@ -58,15 +58,17 @@
 					<p:message for="registro" />
 					<p:outputLabel value="Salario:" />
 					<p:inputText id="salario" value="#{employeeBean.employee.salary}"
-						maxlength="5" />
-					<p:message for="salario" />
+						maxlength="5" required="true" requiredMessage="Insira salario" />
+					<p:message for="salario" display="text"/>
 					<p:outputLabel value="Telefone:" />
 					<p:inputText id="telefone"
 						value="#{employeeBean.employee.telefone}" maxlength="12" />
 					<p:outputLabel value="" />
 					<p:outputLabel value="" />
 					<p:commandButton id="btn-enviar" value="Cadastrar"
-						action="#{employeeBean.addEmployee}" update="@form" styleClass="ui-button-help" />
+						action="#{employeeBean.addEmployee}" update="@form" styleClass="ui-button-help" >
+						<f:ajax render="@form"/>
+					</p:commandButton>
 				</p:panelGrid>
 			</p:panel>
 		</h:form>

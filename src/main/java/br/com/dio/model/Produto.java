@@ -13,28 +13,40 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_produto")
 public class Produto implements Serializable {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@Column(name = "cod_produto")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long codProduto;
-	private String nome;
-	private Double preco;
+	@Column(name="nome")
+	private String nomeProduto;
+	@Column(name="descricao")
+	private String descricaoProduto;
+	@Column(name="peso")
+	private  Double pesoProduto;
+	@Column(name="preco")
+	private Double precoProduto;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
 	
 	public Produto() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Produto(long codProduto, String nome, Double preco) {
-		super();
+
+	public Produto(long codProduto, String nomeProduto, String descricaoProduto, Double pesoProduto, Double precoProduto) {
 		this.codProduto = codProduto;
-		this.nome = nome;
-		this.preco = preco;
+		this.nomeProduto = nomeProduto;
+		this.descricaoProduto = descricaoProduto;
+		this.pesoProduto = pesoProduto;
+		this.precoProduto = precoProduto;
 	}
 
 	public long getCodProduto() {
@@ -45,25 +57,36 @@ public class Produto implements Serializable {
 		this.codProduto = codProduto;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeProduto() {
+		return nomeProduto;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
 	}
 
-	public Double getPreco() {
-		return preco;
+	public String getDescricaoProduto() {
+		return descricaoProduto;
 	}
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setDescricaoProduto(String descricaoProduto) {
+		this.descricaoProduto = descricaoProduto;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(codProduto);
+	public Double getPesoProduto() {
+		return pesoProduto;
+	}
+
+	public void setPesoProduto(Double pesoProduto) {
+		this.pesoProduto = pesoProduto;
+	}
+
+	public Double getPrecoProduto() {
+		return precoProduto;
+	}
+
+	public void setPrecoProduto(Double precoProduto) {
+		this.precoProduto = precoProduto;
 	}
 
 	@Override
@@ -77,7 +100,8 @@ public class Produto implements Serializable {
 		Produto other = (Produto) obj;
 		return codProduto == other.codProduto;
 	}
-	
-	
-
+	@Override
+	public int hashCode() {
+		return Objects.hash(codProduto);
+	}
 }

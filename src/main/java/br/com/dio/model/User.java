@@ -43,6 +43,15 @@ public class User implements Serializable{
     @Column(name = "data_cadastro")
     @Temporal(TemporalType.DATE)
     private Date dataCadastro;
+	private int appId;
+
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
+	}
     
     public User() {
     	
