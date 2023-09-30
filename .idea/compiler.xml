@@ -9,8 +9,5 @@
         <module name="ProjetoJsf" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ProjetoJsf" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -35,7 +35,6 @@
                 <p:menuitem value="Justify" icon="pi pi-fw pi-align-justify"/>
             </p:submenu>
 
-            <c:if test="#{userUtils.typeUser() == 1}">
                 <p:divider layout="vertical"/>
                 <p:submenu label="Usuarios" icon="pi pi-fw pi-user">
                     <p:menuitem value="Pesquisar" icon="pi pi-fw pi-search"
@@ -51,15 +50,14 @@
                     <p:menuitem value="Novo" icon="pi pi-fw pi-plus"
                                 action="/restricted/employeeList/register_employee?faces-redirect=true"/>
                 </p:submenu>
-            </c:if>
 
             <p:divider layout="vertical"/>
 
             <f:facet name="options">
-                <div id="Pesquisa" class="ui-input-icon-left mr-2 boxPesquisa">
-                    <i class="pi pi-fw pi-search"/>
-                    <p:inputText placeholder="Pesquisar Menu"/>
-                </div>
+<!--                <div id="Pesquisa" class="ui-input-icon-left mr-2 boxPesquisa">-->
+<!--                    <i class="pi pi-fw pi-search"/>-->
+<!--                    <p:inputText placeholder="Pesquisar Menu"/>-->
+<!--                </div>-->
                 <p:commandButton value="Logout" action="#{loginBean.doLogout}"
                                  icon="pi pi-fw pi-sign-out"
                                  styleClass="ui-button-raised ui-button-help"/>

@@ -151,7 +151,7 @@ public class UserDaoHibernate implements IUserDao {
 			e.printStackTrace();
 		}
 		user.setDataCadastro(new Date());
-		user.setTypeUser(FuncoesEnum.funcaoById(Integer.parseInt(retorno[5].toString())));
+		user.setTypeUser(FuncoesEnum.funcaoById(Integer.parseInt(retorno[6].toString())));
 		
 
 		return user;

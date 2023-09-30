@@ -10,45 +10,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="443fd092-7e2c-4888-8c6d-947e6406d931" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/ProdutoBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ProjetoJsf_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ProjetoJsf_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_api_2_2_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_platform_jakarta_jakartaee_api_8_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_javax_el_api_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_2_0_SP1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_faces_javax_faces_api_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_faces_jsf_api_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_interceptor_javax_interceptor_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_faces_2_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_4_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_weld_servlet_weld_servlet_2_4_8_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_11_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/Session/SessionContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/Session/SessionContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserCreateBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/UserCreateBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoJsf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoJsf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/UserDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/UserDaoHibernate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/templateMenusPrime.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/templateMenusPrime.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/form_employee.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/form_employee.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/register_employee.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/employeeList/register_employee.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/Session/SessionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/Session/SessionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DFViewBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DFViewBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DeleteEmployeeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/DeleteEmployeeBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/EmployeeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/EmployeeBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/LoginBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/UserCreateBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/UserCreateBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/bean/ValidateBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/bean/ValidateBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/DaoFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/EmployeeDaoHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/EmployeeDaoHibernate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/IUserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/UserDaoHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/UserDaoHibernate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/ConsultaSerasa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/ConsultaSerasa.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Empresa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/FormaDePagamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/FormaDePagamento.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Formulario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Formulario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/FuncoesEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/FuncoesEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Pedido.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Produto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/ProdutoPK.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/ProdutoPK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/StatusAprovacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/StatusAprovacao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/util/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/util/LoginFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/util/UserUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +97,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2Jy2wezepTxW81mKhsvNs4jpLIg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -97,13 +112,19 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/multiportal/Documents/ProjetoJSFCompras&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/multiportal/Documents/TCC/ProjetoJSFCompras&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -133,7 +154,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="923e661e-46f6-49c3-8325-a9cc2541d664" />
+        <option name="BASE_DIRECTORY_NAME" value="f53a14ab-df82-472e-8ff3-fadff23b6207" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -141,7 +162,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49711" />
+        <option name="DEBUG_PORT" value="49722" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -205,7 +226,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="false">
+        <option name="BuildArtifacts" enabled="true">
           <artifact name="ProjetoJsf:war" />
         </option>
       </method>
@@ -226,6 +247,12 @@
       <workItem from="1676907919805" duration="948000" />
       <workItem from="1676908893753" duration="9567000" />
       <workItem from="1677001957379" duration="164000" />
+      <workItem from="1694870953136" duration="1966000" />
+      <workItem from="1696107651045" duration="29000" />
+      <workItem from="1696107722495" duration="462000" />
+      <workItem from="1696108396475" duration="419000" />
+      <workItem from="1696108886148" duration="322000" />
+      <workItem from="1696109253382" duration="524000" />
     </task>
     <servers />
   </component>
