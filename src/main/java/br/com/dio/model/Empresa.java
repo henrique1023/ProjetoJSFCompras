@@ -155,7 +155,7 @@ public class Empresa implements Serializable{
 		this.balanco = balanco;
 	}
 
-	public Double getLucro() {
+	public Double getLucro(double v) {
 		return lucro;
 	}
 

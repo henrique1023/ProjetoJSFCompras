@@ -17,7 +17,6 @@ import java.util.List;
 public class ProdutoBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
     private Produto produto = new Produto(1,"Caixa","Caixa de papelão",10.00,31.00);
     private List<Produto> produtos = new ArrayList<>();
     private EdicaoTextoDataTable edicao = new EdicaoTextoDataTable();
@@ -28,14 +27,45 @@ public class ProdutoBean implements Serializable {
         if (produto == null) {
             produto = new Produto();
         }
+        produtos.add(produto);
     }
 
-    public String addEmployee() {
+    public String addProduto() {
         clean();
         return "/restricted/produtoList/form_produto.xhtml?faces-redirect=true";
     }
 
+    public void searchAllProdutos() {
+        produtos.add(produto);
+    }
+
+    public void clearListProdutos() {
+        produtos = null;
+    }
+
     private void clean() {
         this.produto = new Produto();
+    }
+
+    public String editar(Employee e) {
+        flash.clear();
+        flash.put("produto", e);
+        return "/restricted/produtoList/register_produto?faces-redirect=true";
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
     }
 }

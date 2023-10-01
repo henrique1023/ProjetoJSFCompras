@@ -20,14 +20,6 @@ public class Pedido implements Serializable {
 	private FormaDePagamento formaPagamento;
 	private int appId;
 
-	public int getAppId() {
-		return appId;
-	}
-
-	public void setAppId(int appId) {
-		this.appId = appId;
-	}
-
 	@ManyToOne
 	@JoinColumn(name="empresa_id")
 	private Empresa empresa;
@@ -37,7 +29,6 @@ public class Pedido implements Serializable {
 	private List<ProdutoPK> produtos = new ArrayList<>();
 	
 	public Pedido() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Pedido(long codPedido, Double totalPedido, Double totalPreco, FormaDePagamento formaPagamento,
@@ -96,5 +87,12 @@ public class Pedido implements Serializable {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
+	}
+	public int getAppId() {
+		return appId;
+	}
+
+	public void setAppId(int appId) {
+		this.appId = appId;
 	}
 }
