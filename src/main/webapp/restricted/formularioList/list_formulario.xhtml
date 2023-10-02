@@ -6,38 +6,44 @@
              xmlns:p="http://primefaces.org/ui"
              xmlns:ui="http://java.sun.com/jsf/facelets"
              template="/restricted/Templates/templateMenusPrime.xhtml">
-    <h:head>
-        <link rel="StyleSheet" type="text/css" href="/restricted/css/telaCss.css"/>
+    <f:metadata>
+        <f:viewAction action="#{formularioBean.init()}" />
+    </f:metadata>
+    <h:head id="headTela">
+        <link rel="StyleSheet" type="text/css" href="./css/stylesTela.css"/>
     </h:head>
-    <h:outputText value="Produtos"></h:outputText>
+    <h:outputText value="Formularios de Credito" id="textoTela" style="font-size: 35px;"></h:outputText>
     <p:growl id="growl" showDetail="true"/>
     <h:form id="form_button">
         <p:commandButton styleClass="ui-button-raised ui-button-help" id="button_search"
-                         icon="pi pi-search" value="Pesquisar" action="#{produtoBean.searchAllProdutos()}">
+                         icon="pi pi-search" value="Pesquisar" action="#{formularioBean.searchAllFormularios()}">
             <f:ajax execute="@form" render="tableView"></f:ajax>
         </p:commandButton>
 
         <p:commandButton class="button" id="button_clean" icon="pi pi-times"
                          value="Limpar" styleClass="ui-button-danger"
-                         action="#{employeeBean.clearListEmployee}">
+                         action="#{formularioBean.clearListFormularios()}">
             <f:ajax execute="@form" render="tableView"></f:ajax>
         </p:commandButton>
 
     </h:form>
     <h:panelGroup styleClass="center" id="tableView">
-        <p:dataTable value="#{produtoBean.produtos}" var="e" border="3"
+        <p:dataTable value="#{formularioBean.formularios}" var="e" border="3"
                      id="table" rows="10" paginator="true" paginatorPosition="bottom">
             <p:column headerText="Opções" width="150">
                 <p:commandButton icon="pi pi-pencil"
                                  styleClass="rounded-button ui-button-help"
-                                 action="#{produtoBean.editar(e)}">
+                                 action="#{formularioBean.editar(e)}">
                 </p:commandButton>
 
             </p:column>
-            <p:column width="150" headerText="Nome Produto">#{e.nomeProduto}</p:column>
-            <p:column width="150" headerText="Descricao Produto">#{e.descricaoProduto}</p:column>
-            <p:column width="150" headerText="Peso Produto">#{e.pesoProduto}</p:column>
-            <p:column width="150" headerText="Preco Produto">#{e.precoProduto}</p:column>
+            <p:column width="150" headerText="Nome Empresa">#{e.empresa.nomeEmpresa}</p:column>
+            <p:column width="150" headerText="Nome Funcionario">#{e.funcionario.name}</p:column>
+            <p:column width="150" headerText="Codigo Formulario">#{e.codFormulario}</p:column>
+            <p:column width="150" headerText="Status Formulario">Analise</p:column>
+            <p:column width="150" headerText="Limite Serasa">R$ #{e.serasa.limiteSerasa}</p:column>
+            <p:column width="150" headerText="Valor Aprovado">R$ #{e.valorAprovado}</p:column>
+            <p:column width="150" headerText="Pontos Obtidos">#{e.pontosObtidos}</p:column>
         </p:dataTable>
     </h:panelGroup>
 </ui:decorate>

@@ -2,25 +2,27 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ProjetoJsf:war exploded" />
+      <artifact name="ProjetoJsf:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="443fd092-7e2c-4888-8c6d-947e6406d931" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/FormularioBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/restricted/produtoList/list_produto.xhtml" afterDir="false" />
+    <list default="true" id="443fd092-7e2c-4888-8c6d-947e6406d931" name="Changes" comment="Impl - Tela formulario">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/restricted/formularioList/css/stylesTela.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/restricted/produtoList/css/telaCss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/ProdutoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/ProdutoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/model/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/model/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/model/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/stylesTela.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/stylesEmployee.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/css/telaCss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/form_login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/form_login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/FormularioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/bean/FormularioBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/EmployeeDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/dao/EmployeeDaoHibernate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/templateMenusPrime.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/Templates/templateMenusPrime.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/css/telaCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/css/telaCss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/formularioList/list_formulario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/formularioList/list_formulario.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/restricted/produtoList/list_produto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/restricted/produtoList/list_produto.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/dao/EmployeeDaoHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/dao/EmployeeDaoHibernate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Empresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dio/model/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dio/model/Pedido.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/multiportal/Documents/TCC/ProjetoJSFCompras/src/main/webapp/restricted&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/multiportal/Documents/TCC/ProjetoJSFCompras/src/main/webapp/restricted/produtoList&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -82,8 +84,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/restricted" />
       <recent name="$PROJECT_DIR$/src/main/webapp/restricted/produtoList" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/restricted/formularioList" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/restricted" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -102,7 +105,7 @@
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="ProjetoJsf:war">
           <settings>
@@ -189,7 +192,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="ProjetoJsf:war exploded" />
+          <artifact name="ProjetoJsf:war" />
         </option>
       </method>
     </configuration>
@@ -215,7 +218,8 @@
       <workItem from="1696108396475" duration="419000" />
       <workItem from="1696108886148" duration="322000" />
       <workItem from="1696109253382" duration="2448000" />
-      <workItem from="1696175368419" duration="2419000" />
+      <workItem from="1696175368419" duration="8300000" />
+      <workItem from="1696269014458" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="Impl - bean produto">
       <option name="closed" value="true" />
@@ -225,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696109812992</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Impl - Tela formulario">
+      <option name="closed" value="true" />
+      <created>1696177952536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696177952536</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +245,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Impl - bean produto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Impl - bean produto" />
+    <MESSAGE value="Impl - Tela formulario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Impl - Tela formulario" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/dio/service/EmployeeService.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/dio/dao/EmployeeDaoHibernate.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

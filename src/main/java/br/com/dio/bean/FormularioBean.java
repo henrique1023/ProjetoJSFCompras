@@ -28,11 +28,8 @@ public class FormularioBean implements Serializable {
     private EdicaoTextoDataTable edicao = new EdicaoTextoDataTable();
     private Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
     public void init() {
-        formulario = (Formulario) flash.get("formulario");
-        if (formulario == null) {
-            formulario = new Formulario();
-        }
         empresa.setIdEmpresa(1);
+        empresa.setNomeEmpresa("MultiNomes");
         empresa.setBalanco(500.000);
         empresa.setCnpj(123123123123123l);
         empresa.setCapitalSocial(1000000.00);
@@ -77,6 +74,7 @@ public class FormularioBean implements Serializable {
         formulario.setPontosMaximos(90);
         formulario.setPontosObtidos(70);
         formulario.setPontosNecessarios(60);
+        formulario.setStatus(StatusAprovacao.ANALISE);
 
     }
 
@@ -87,6 +85,9 @@ public class FormularioBean implements Serializable {
 
     public void searchAllFormularios() {
         formularios.add(formulario);
+    }
+    public void clearListFormularios() {
+        formularios = null;
     }
 
     private void clean() {
